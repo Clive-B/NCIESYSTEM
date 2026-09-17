@@ -1,0 +1,29 @@
+[project]
+name = "ncie-foundation-service"
+version = "0.0.0"
+description = "NCIE WBS-15-WP-001 local foundation service"
+readme = "README.md"
+dependencies = []
+
+[project.optional-dependencies]
+development = [
+    "mypy==2.3.1",
+    "ruff==0.16.8",
+]
+
+[tool.mypy]
+strict = true
+python_version = "3.14"
+
+[tool.ruff]
+target-version = "py314"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "RUF"]
+
+[tool.ncie]
+work-package = "WBS-15-WP-001"
+decision-evidence = "NCIE-WBS15-OWNER-DECISION-2026-09-17-001"
+production-authorized = false
+acceptance-status = "PENDING"

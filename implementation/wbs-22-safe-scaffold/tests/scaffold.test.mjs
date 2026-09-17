@@ -3,6 +3,7 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 const fixtureUrl = new URL("../fixtures/workspace-shell.html", import.meta.url);
+const componentFixtureUrl = new URL("../fixtures/component-primitives.html", import.meta.url);
 const tokenContractUrl = new URL("../contracts/design-token-categories.json", import.meta.url);
 const stateContractUrl = new URL("../contracts/presentation-state.schema.json", import.meta.url);
 
@@ -55,4 +56,23 @@ test("mock presentation-state contract cannot assert governed authority", async 
   assert.equal(mockRule.authorizationState.const, "UNKNOWN");
   assert.deepEqual(mockRule.humanApprovalState.enum, ["NOT_APPLICABLE", "PENDING"]);
   assert.equal(mockRule.evidenceState.const, "NOT_EVIDENCE");
+});
+
+test("component primitives expose labels, errors, roles, and non-colour cues", async () => {
+  const html = await readFile(componentFixtureUrl, "utf8");
+  assert.match(html, /<label for="reference">/);
+  assert.match(html, /aria-invalid="true"/);
+  assert.match(html, /aria-describedby="reference-help reference-error"/);
+  assert.match(html, /role="alert"/);
+  assert.match(html, /⚠/);
+  assert.match(html, /does not rely on colour/);
+});
+
+test("dialog and table fixtures preserve explicit semantic structure", async () => {
+  const html = await readFile(componentFixtureUrl, "utf8");
+  assert.match(html, /<dialog aria-labelledby="mock-dialog-title" aria-describedby="mock-dialog-description">/);
+  assert.match(html, /<caption>Mock state records — not Evidence<\/caption>/);
+  assert.match(html, /<th scope="col" aria-sort="none">/);
+  assert.match(html, /<th scope="row">/);
+  assert.match(html, /No Human decision can be recorded from this fixture/);
 });

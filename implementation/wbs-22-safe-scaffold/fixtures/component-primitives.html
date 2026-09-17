@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NCIE component primitives — non-authoritative mock</title>
+  </head>
+  <body data-source-kind="MOCK" data-authoritative="false">
+    <header>
+      <p role="status">ⓘ MOCK COMPONENT FIXTURE — NOT LIVE, NOT EVIDENCE, NOT HUMAN APPROVAL</p>
+      <h1>Semantic component primitives</h1>
+    </header>
+    <main>
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading">Labeled input and validation state</h2>
+        <form>
+          <label for="reference">Mock reference</label>
+          <input id="reference" name="reference" aria-describedby="reference-help reference-error" aria-invalid="true">
+          <p id="reference-help">Use mock values only.</p>
+          <p id="reference-error" role="alert">⚠ Text is required. This message does not rely on colour.</p>
+          <button type="button" disabled aria-disabled="true">Submission unavailable</button>
+        </form>
+      </section>
+      <section aria-labelledby="alert-heading">
+        <h2 id="alert-heading">Alert state</h2>
+        <div role="alert" aria-live="assertive">⚠ Mock dependency unavailable — no authorization rule has been relaxed.</div>
+      </section>
+      <section aria-labelledby="dialog-heading">
+        <h2 id="dialog-heading">Dialog contract</h2>
+        <dialog aria-labelledby="mock-dialog-title" aria-describedby="mock-dialog-description">
+          <h3 id="mock-dialog-title">Mock review</h3>
+          <p id="mock-dialog-description">No Human decision can be recorded from this fixture.</p>
+          <button type="button">Close</button>
+        </dialog>
+      </section>
+      <section aria-labelledby="table-heading">
+        <h2 id="table-heading">Table contract</h2>
+        <table>
+          <caption>Mock state records — not Evidence</caption>
+          <thead>
+            <tr><th scope="col" aria-sort="none">Reference ↕</th><th scope="col">State</th></tr>
+          </thead>
+          <tbody>
+            <tr><th scope="row">MOCK-001</th><td>ⓘ Non-authoritative</td></tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>NCIE-012 Chapters 8 and 29 — safe semantic scaffold.</p>
+    </footer>
+  </body>
+</html>

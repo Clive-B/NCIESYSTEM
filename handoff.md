@@ -37,7 +37,7 @@ NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. Lower-level i
 
 | WBS | State | Blocker or authority |
 |---|---|---|
-| WBS-15 Foundation / Platform | BLOCKED | `HR17-15-1`; NCIE-004 `TD-5-1` backend runtime decision |
+| WBS-15 Foundation / Platform | IN PROGRESS | `WBS-15-WP-001` is WORK COMPLETE with local verification evidence; remaining WBS-15 packages are not yet defined/started |
 | WBS-16 Security, IAM & Governance | BLOCKED | WBS-15; `HR17-16-1`; upstream HR9 family |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16; `HR17-17-1`; upstream HR14 family |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17; `HR17-18-1`; provider/source discovery |
@@ -47,6 +47,8 @@ NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. Lower-level i
 | WBS-22 UX/UI & Design System | IN PROGRESS, SAFE SCAFFOLD ONLY | NCIE-017 §22.1 permits early mock design-system/shell work; `HR17-22-1`, `HR12-5-1`, and `HR12-8-1` are Non-Blocking for interim primitives |
 | WBS-23 DevSecOps / Infrastructure | BLOCKED | WBS-15/WBS-16; `HR17-23-1`; platform/environment decisions |
 | WBS-24 Testing / Verification | TEST PENDING | Controlled execution depends on implementation plus NCIE-016 prerequisites |
+
+The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS15_HUMAN_REVIEW_DECISION_PACK.md`. D1-A, D2-A, D3-A and D4-A were subsequently recorded in `implementation/decisions/NCIE_WBS15_OWNER_DECISION_2026-09-17-001.md` under evidence reference `NCIE-WBS15-OWNER-DECISION-2026-09-17-001`. The natural-person identity and institutional authority assertion were supplied by the user and were not independently verified by Codex.
 
 ## Implemented increment
 
@@ -59,11 +61,30 @@ Artifacts:
 - `implementation/wbs-22-safe-scaffold/package.json`
 - `implementation/wbs-22-safe-scaffold/contracts/design-token-categories.json`
 - `implementation/wbs-22-safe-scaffold/contracts/presentation-state.schema.json`
+- `implementation/wbs-22-safe-scaffold/fixtures/component-primitives.html`
 - `implementation/wbs-22-safe-scaffold/fixtures/workspace-shell.html`
 - `implementation/wbs-22-safe-scaffold/tests/scaffold.test.mjs`
 - `implementation/wbs-22-safe-scaffold/evidence/LOCAL_RUN_20260917_001.md`
+- `implementation/wbs-22-safe-scaffold/evidence/LOCAL_RUN_20260917_002.md`
 
 The scaffold is framework-neutral, dependency-free and reversible. It uses mock state only and prevents control availability from being represented as authorization, Human approval or Evidence.
+
+### WBS-15-WP-001 Foundation Service
+
+Artifacts:
+
+- `implementation/wbs-15-wp-001-foundation-service/README.md`
+- `implementation/wbs-15-wp-001-foundation-service/pyproject.toml`
+- `implementation/wbs-15-wp-001-foundation-service/TRACEABILITY.md`
+- `implementation/wbs-15-wp-001-foundation-service/src/ncie_foundation/`
+- `implementation/wbs-15-wp-001-foundation-service/tests/test_foundation.py`
+- `implementation/wbs-15-wp-001-foundation-service/evidence/IMPLEMENTATION_20260917_001.md`
+- `implementation/wbs-15-wp-001-foundation-service/evidence/LOCAL_RUN_20260917_002.md`
+- `implementation/wbs-15-wp-001-foundation-service/requirements-dev.lock`
+
+Implemented scope: type-annotated Python ASGI foundation, liveness/readiness boundaries, correlation-ID enforcement, problem-details errors, secret-reference configuration, bounded structured logging, telemetry hooks, fail-closed authorization extension point, and standard-library unit/contract tests.
+
+Package status: `WORK COMPLETE`. Python 3.14.7/PyPI toolchain authority was recorded under `NCIE-WBS15-OWNER-DECISION-2026-09-17-002`. Development dependencies are version- and hash-locked. Strict mypy, Ruff lint, Ruff formatting, compilation and all 8 unit/contract tests passed locally. Controlled NCIE-016 verification and acceptance remain pending.
 
 ## Explicitly unresolved and excluded
 
@@ -71,18 +92,18 @@ The scaffold is framework-neutral, dependency-free and reversible. It uses mock 
 - Top-level navigation labels and terminology: `HR12-4-1`.
 - Supported form factors and responsive breakpoints: `HR12-6-1`.
 - Accessibility conformance level and representative-user acceptance: `HR12-29-1`, `HR16-22-1`.
-- Backend runtime selection: NCIE-004 `TD-5-1`, `HR17-15-1`.
+- FastAPI remains a provisional NCIE-004 default and is not yet required by an authorized application route; the current foundation has no runtime third-party dependency.
 - Live authorization, Evidence, governance, Agent, VPF, API, domain, infrastructure and production state.
 
 No convenient default has been used to bypass these blockers.
 
 ## Test and evidence status
 
-Run identity: `LOCAL-WBS22-20260917-001`
+Latest run identity: `LOCAL-WBS22-20260917-002`
 
 - Environment: Windows; Node.js `v25.1.0`; npm `11.6.2`.
 - Successful command: `npm.cmd test`.
-- Actual result: 5 tests executed, 5 passed, 0 failed, exit code 0.
+- Actual result: 7 tests executed, 7 passed, 0 failed, exit code 0.
 - Governed data transmitted: none.
 - External services used: none.
 - Third-party dependencies installed: none.
@@ -96,6 +117,16 @@ Mapping:
 
 The local pass is implementation evidence only. It is not accessibility conformance, representative-user validation, security validation, NCIE-016 acceptance, production acceptance or go-live authority.
 
+WBS-15-WP-001 latest run identity: `LOCAL-WBS15-WP001-20260917-002`
+
+- Python 3.14.7; mypy 2.3.1; Ruff 0.16.8.
+- Dependency lock verification: passed in a fresh environment with `--require-hashes` and no index access.
+- Strict type check: passed.
+- Lint and format checks: passed.
+- Compilation: passed.
+- Unit/contract tests: 8 executed, 8 passed, 0 failed.
+- Package status: `WORK COMPLETE`; NCIE-016 testing and acceptance remain pending.
+
 ## VPF boundary
 
 VPF was applied behaviorally to human-primary authority, least privilege, explainability, provenance, dignity, data minimization and sovereignty. No VPF runtime, checksum seal, signature, certificate, ledger, PADCA/Omnis service, residency enforcement or production control has been verified or claimed as executed.
@@ -104,7 +135,9 @@ VPF was applied behaviorally to human-primary authority, least privilege, explai
 
 1. Verify the branch and controlled-source hashes before further implementation.
 2. Run `npm.cmd test` from `implementation/wbs-22-safe-scaffold` and preserve the actual result under a new run identity if the scaffold changes.
-3. Continue only independent WBS-22 semantic/accessibility primitives that do not select an open brand, navigation, breakpoint, conformance level or authoritative state.
-4. Stop the affected scope and issue a blocker report if a requested change requires any unresolved HR item listed above.
-5. Do not begin WBS-15 backend/runtime implementation until the minimum Human decision for `TD-5-1` / `HR17-15-1` is recorded.
-6. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
+3. Preserve the owner decision record `NCIE-WBS15-OWNER-DECISION-2026-09-17-001`; do not expand its scope implicitly.
+4. Preserve the approved Python 3.14.7/PyPI decision and `requirements-dev.lock`; update dependencies only through a new reviewed lock and evidence run.
+5. Continue only independent WBS-22 semantic/accessibility primitives that do not select an open brand, navigation, breakpoint, conformance level or authoritative state.
+6. Stop the affected scope and issue a blocker report if a requested change requires any unresolved HR item listed above.
+7. Do not treat the WBS-15 source implementation or any future unit-test pass as completion of WBS-16 security, NCIE-016 verification or production acceptance.
+8. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.

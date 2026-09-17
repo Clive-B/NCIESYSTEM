@@ -28,7 +28,7 @@ NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`,
 
 | WBS | Preflight state | Exact dependency or blocker | Permitted action now |
 |---|---|---|---|
-| WBS-15 Foundation / Platform | BLOCKED | `HR17-15-1`; NCIE-004 `TD-5-1` primary backend runtime is Blocking | No backend/runtime selection. Framework-neutral contracts only where independently authorized. |
+| WBS-15 Foundation / Platform | IN PROGRESS | D1-A/D2-A/D3-A recorded under `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` | Implement `WBS-15-WP-001` local Python foundation within the recorded exclusions. |
 | WBS-16 Security, IAM & Governance | BLOCKED | WBS-15 predecessor; `HR17-16-1`; upstream HR9 family | No security implementation or policy default. |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16 predecessors; `HR17-17-1`; upstream HR14 family | No physical schema or persistence selection. |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-18-1`; provider/source discovery | No connector or external contract implementation. |
@@ -59,6 +59,14 @@ Excluded and blocked:
 - React/package selection as an institutional commitment. NCIE-004 `TD-6-1` remains a Non-Blocking Proposed Design Default; this scaffold stays framework-neutral and reversible.
 
 Minimum Human decisions needed to unblock the excluded scopes are the decisions named by the HR items above. No default is selected in their place.
+
+## 4A. WBS-15-WP-001 released scope
+
+The Project Owner selections D1-A, D2-A, D3-A and D4-A were supplied and recorded on 2026-09-17 under `NCIE-WBS15-OWNER-DECISION-2026-09-17-001`. Codex recorded the supplied authority assertion but did not independently verify identity or institutional authority.
+
+Authorized implementation is limited to local repository/application structure, a type-annotated Python service foundation, secret-reference configuration, health/readiness interfaces, structured logging, telemetry hooks, unit/contract tests and traceability. Production hosting, live credentials/data, external integrations, blocked product selections, WBS-16 completion, acceptance and go-live remain excluded.
+
+The implementation exists under `implementation/wbs-15-wp-001-foundation-service/`. Python 3.14.7 and PyPI were approved under `NCIE-WBS15-OWNER-DECISION-2026-09-17-002`; development dependencies are exact-version and SHA-256 locked. Strict mypy, Ruff lint/format, compilation and 8 unit/contract tests passed locally under run `LOCAL-WBS15-WP001-20260917-002`. The package is `WORK COMPLETE`; controlled NCIE-016 verification and acceptance remain pending.
 
 ## 5. Verification mapping
 
