@@ -1,0 +1,10 @@
+# Microsoft Office lock files
+~$*
+
+# Python-generated artifacts
+__pycache__/
+*.py[cod]
+
+# Temporary and diagnostic output
+*.tmp
+scripts/*_dump.json
