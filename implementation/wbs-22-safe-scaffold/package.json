@@ -1,0 +1,9 @@
+{
+  "name": "ncie-wbs-22-safe-scaffold",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Framework-neutral, non-authoritative WBS-22 semantic scaffold",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs"
+  }
+}

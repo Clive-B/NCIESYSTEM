@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ncie:wbs-22:presentation-state",
+  "title": "NCIE presentation-state separation contract",
+  "description": "Prevents UI availability from being represented as authorization, Evidence, or Human approval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sourceKind",
+    "controlAvailability",
+    "authorizationState",
+    "humanApprovalState",
+    "evidenceState",
+    "authoritative"
+  ],
+  "properties": {
+    "sourceKind": { "enum": ["MOCK", "LIVE"] },
+    "controlAvailability": { "enum": ["AVAILABLE", "DISABLED", "HIDDEN"] },
+    "authorizationState": { "enum": ["UNKNOWN", "AUTHORIZED", "DENIED", "EXPIRED"] },
+    "humanApprovalState": { "enum": ["NOT_APPLICABLE", "PENDING", "APPROVED", "REJECTED", "CONDITIONAL"] },
+    "evidenceState": { "enum": ["NOT_EVIDENCE", "CANDIDATE", "REGISTERED", "SUPERSEDED"] },
+    "authoritative": { "type": "boolean" },
+    "message": { "type": "string", "minLength": 1 }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "sourceKind": { "const": "MOCK" } }, "required": ["sourceKind"] },
+      "then": {
+        "properties": {
+          "authoritative": { "const": false },
+          "authorizationState": { "const": "UNKNOWN" },
+          "humanApprovalState": { "enum": ["NOT_APPLICABLE", "PENDING"] },
+          "evidenceState": { "const": "NOT_EVIDENCE" }
+        }
+      }
+    }
+  ]
+}

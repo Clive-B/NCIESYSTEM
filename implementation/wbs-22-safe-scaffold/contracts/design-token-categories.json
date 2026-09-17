@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:ncie:wbs-22:design-token-categories",
+  "title": "NCIE brand-neutral design token category contract",
+  "description": "NCIE-012 Chapter 7 taxonomy only. Values remain unresolved under HR12-7-1.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "typographyRoles",
+    "spacing",
+    "sizing",
+    "iconographyRoles",
+    "colourRoles",
+    "motion",
+    "borders",
+    "density",
+    "stateRoles"
+  ],
+  "properties": {
+    "typographyRoles": { "$ref": "#/$defs/unresolvedCategory" },
+    "spacing": { "$ref": "#/$defs/unresolvedCategory" },
+    "sizing": { "$ref": "#/$defs/unresolvedCategory" },
+    "iconographyRoles": { "$ref": "#/$defs/unresolvedCategory" },
+    "colourRoles": { "$ref": "#/$defs/unresolvedCategory" },
+    "motion": { "$ref": "#/$defs/unresolvedCategory" },
+    "borders": { "$ref": "#/$defs/unresolvedCategory" },
+    "density": { "$ref": "#/$defs/unresolvedCategory" },
+    "stateRoles": { "$ref": "#/$defs/unresolvedCategory" }
+  },
+  "$defs": {
+    "unresolvedCategory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "humanReview"],
+      "properties": {
+        "status": { "const": "UNRESOLVED" },
+        "humanReview": { "const": "HR12-7-1" }
+      }
+    }
+  }
+}
