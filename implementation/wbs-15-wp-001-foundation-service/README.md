@@ -1,10 +1,12 @@
 # WBS-15 Foundation Service
 
-Status: `WBS-15-WP-001` and `WBS-15-WP-002` WORK COMPLETE for their local implementation scopes; controlled verification and acceptance pending.
+Status: `WBS-15 — IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING` under owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`.
 
 Authority: owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` released the scoped WBS-15 package using type-annotated Python. This package does not authorize production hosting, live credentials, production data, external integrations, security acceptance or go-live.
 
 WP-002 implementation authority: `NCIE-WBS15-OWNER-DECISION-2026-09-18-002` released local service composition, lifecycle, aggregate readiness and in-process harness work without new runtime dependencies.
+
+WP-003 through WP-005 implementation authority: `NCIE-WBS15-OWNER-DECISION-2026-09-18-005` released request/identity-interface/extension contracts, neutral observability semantics, reproducibility and closure-evidence work. Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006` subsequently approved WBS-15 implementation closure and downstream readiness.
 
 ## Implemented scope
 
@@ -25,6 +27,12 @@ WP-002 adds:
 - aggregate fail-closed required-dependency readiness;
 - startup configuration validation through the composition boundary;
 - a deterministic in-process test harness with no network listener.
+
+WP-003 adds typed request contexts, explicit identity-interface states, protected route registration/dispatch, configuration-schema validation and service-version metadata while leaving IAM to WBS-16.
+
+WP-004 adds five distinct provider-neutral observability categories, typed event/metric/trace contracts, protected-attribute rejection and in-memory test collection while leaving products/deployment to WBS-23.
+
+WP-005 adds the canonical source-tree template manifest, offline clean-environment verification, consolidated traceability, downstream handover and the Human-approved completion report.
 
 FastAPI remains an NCIE-004 Proposed Design Default allowed by D1-A. It is not added because this package currently needs no runtime dependency and no FastAPI route has yet been authorized. The ASGI boundary is directly adaptable to FastAPI without changing the governed contracts in this package.
 
@@ -63,4 +71,4 @@ Quality checks:
 .venv\Scripts\python -m ruff format --check src tests
 ```
 
-Successful local checks produce implementation evidence only. They do not establish NCIE-016 system verification or production acceptance.
+Successful local checks produce implementation evidence. WBS-15 closure is established separately by owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`; the checks do not establish NCIE-016 system verification, security accreditation, production acceptance or go-live.

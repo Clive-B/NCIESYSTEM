@@ -22,14 +22,14 @@ Controlled implementation corpus: `NCIE PRODUCTION SUIT.zip`
 
 The Master Production Instruction governs execution behavior and expressly authorizes dependency-ready, source-grounded implementation. NCIE-017 remains substantive sequencing authority. Its historical statement that the roadmap itself did not start implementation is preserved as a document-status boundary; this increment relies on the later Master Production Instruction for execution authority. Neither source is treated as test pass, production acceptance, or go-live authority.
 
-NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`. D3-A under `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` approved stable subordinate work-package and task identifiers without renumbering those workstreams. `WBS-15-WP-002` is therefore a permitted identifier, but its preparation or use does not itself authorize implementation.
+NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`. D3-A under `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` approved stable subordinate work-package and task identifiers without renumbering those workstreams. WP-003 through WP-005 are permitted identifiers, but preparation does not itself authorize implementation.
 
 ## 3. Workstream readiness and blocker handling
 
 | WBS | Preflight state | Exact dependency or blocker | Permitted action now |
 |---|---|---|---|
-| WBS-15 Foundation / Platform | IN PROGRESS | `WBS-15-WP-001` and `WBS-15-WP-002` are locally work-complete; controlled verification and remaining WBS-15 decomposition are pending | Preserve local evidence and define the next source-grounded package without expanding authority. |
-| WBS-16 Security, IAM & Governance | BLOCKED | WBS-15 predecessor; `HR17-16-1`; upstream HR9 family | No security implementation or policy default. |
+| WBS-15 Foundation / Platform | IMPLEMENTATION COMPLETE / DOWNSTREAM-READY — CONTROLLED VERIFICATION AND ACCEPTANCE PENDING | D9-A approved under `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`; WP-001 through WP-005 work-complete | Preserve the closure boundary; do not infer security accreditation, production deployment, acceptance or go-live authority. |
+| WBS-16 Security, IAM & Governance | BLOCKED / NEXT | WBS-15 predecessor satisfied; `HR17-16-1` and upstream HR9 family remain open | Prepare/obtain the required Human decisions before any security implementation or policy default. |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16 predecessors; `HR17-17-1`; upstream HR14 family | No physical schema or persistence selection. |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-18-1`; provider/source discovery | No connector or external contract implementation. |
 | WBS-19 ARGUS, Memory, Agent & AI | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-19-1`; Gate A/B, sandbox, and sovereignty prerequisites | No Agent/AI activation or runtime implementation. |
@@ -75,6 +75,20 @@ Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-001` authorized preparation
 The prepared package is `WBS-15-WP-002 Local Service Composition and Lifecycle Contracts`. It proposes a typed local composition root, provider-neutral lifecycle contract, aggregate fail-closed readiness registry, configuration startup validation, deterministic in-process test harness, tests, traceability and evidence. It proposes no new runtime dependency and preserves the approved Python 3.14.7 and locked-development-environment boundary.
 
 The package explicitly excludes production deployment, network server selection, security-provider integration, databases, connectors, live credentials/data, institutional Evidence, domain rules, ARGUS/AI runtime, infrastructure, and controlled acceptance. The authorized source scope is implemented with no new dependency. Strict typing, lint, formatting, compilation and all 19 combined WP-001/WP-002 tests passed under `LOCAL-WBS15-WP002-20260918-001`. Package status is `WORK COMPLETE`; controlled NCIE-016 verification and acceptance remain pending.
+
+## 4C. WBS-15 remaining foundation packages
+
+Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-004` resolves `HR17-15-1` for the WBS-15 foundation boundary: retain framework-neutral ASGI; provide identity interfaces while deferring IAM to WBS-16; implement neutral observability semantics while deferring products/deployment to WBS-23; retain Python 3.14.7, virtual environments and locked pip without additional tooling absent a separately approved demonstrated need.
+
+The same decision authorizes preparation only of:
+
+- `WBS-15-WP-003` — Request, Identity and Application Extension Contracts;
+- `WBS-15-WP-004` — Observability Semantic Foundation;
+- `WBS-15-WP-005` — Reproducible Service Template and WBS-15 Closure.
+
+Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-005` released all three packages in controlled order. WP-003 implemented request, identity-interface and route-extension contracts; WP-004 implemented provider-neutral observability semantics; WP-005 completed offline clean-environment reproducibility, consolidated traceability, downstream handover and the completion report. The clean run passed strict typing/lint/format/compilation, 31 cumulative tests and the template verifier. All three packages are locally `WORK COMPLETE`.
+
+Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006` approved D9-A. WBS-15 is therefore `IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING`. The WBS-16 predecessor condition is satisfied, but WBS-16 remains blocked by `HR17-16-1` and the upstream HR9 decision family. Security accreditation, production deployment, controlled acceptance and go-live remain pending separate Human decisions.
 
 ## 5. Verification mapping
 

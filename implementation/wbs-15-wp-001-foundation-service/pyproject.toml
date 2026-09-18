@@ -24,8 +24,8 @@ select = ["E", "F", "I", "UP", "B", "RUF"]
 
 [tool.ncie]
 work-package = "WBS-15-WP-001"
-work-packages = ["WBS-15-WP-001", "WBS-15-WP-002"]
+work-packages = ["WBS-15-WP-001", "WBS-15-WP-002", "WBS-15-WP-003", "WBS-15-WP-004", "WBS-15-WP-005"]
 decision-evidence = "NCIE-WBS15-OWNER-DECISION-2026-09-17-001"
-latest-decision-evidence = "NCIE-WBS15-OWNER-DECISION-2026-09-18-002"
+latest-decision-evidence = "NCIE-WBS15-OWNER-DECISION-2026-09-18-007"
 production-authorized = false
 acceptance-status = "PENDING"

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": "1",
+  "templateId": "ncie-wbs15-foundation-service",
+  "serviceVersion": "0.0.0",
+  "runtime": {
+    "language": "Python",
+    "version": "3.14.7",
+    "applicationBoundary": "ASGI",
+    "frameworkSelected": false,
+    "runtimeDependencies": []
+  },
+  "implementedWorkPackages": [
+    "WBS-15-WP-001",
+    "WBS-15-WP-002",
+    "WBS-15-WP-003",
+    "WBS-15-WP-004",
+    "WBS-15-WP-005"
+  ],
+  "capabilities": [
+    "configuration-secret-references",
+    "correlation",
+    "default-deny-authorization-extension",
+    "health-readiness",
+    "lifecycle",
+    "request-context",
+    "identity-interface",
+    "application-route-extension",
+    "structured-logging",
+    "observability-semantics",
+    "in-process-test-harness"
+  ],
+  "authorityBoundaries": {
+    "iamImplemented": false,
+    "observabilityProductsDeployed": false,
+    "controlledAcceptanceComplete": false,
+    "productionAuthorized": false,
+    "goLiveAuthorized": false
+  }
+}

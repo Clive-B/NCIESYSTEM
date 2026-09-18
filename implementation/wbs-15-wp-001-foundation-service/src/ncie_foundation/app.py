@@ -10,6 +10,14 @@ from .authorization import AuthorizationBoundary, DenyAllAuthorization
 from .config import FoundationSettings
 from .correlation import correlation_id_from_headers
 from .readiness import ReadinessBoundary, StaticReadiness
+from .request_context import (
+    IdentityBoundary,
+    IdentityState,
+    RequestContext,
+    UnresolvedIdentityBoundary,
+    bounded_header_value,
+)
+from .routing import RouteRegistry
 from .telemetry import NoOpTelemetryHooks, TelemetryContext, TelemetryHooks
 
 Scope = dict[str, Any]
@@ -26,6 +34,8 @@ class FoundationApp:
         authorization: AuthorizationBoundary | None = None,
         telemetry: TelemetryHooks | None = None,
         readiness: ReadinessBoundary | None = None,
+        identity: IdentityBoundary | None = None,
+        routes: RouteRegistry | None = None,
         application_dependencies_ready: bool | None = None,
     ) -> None:
         if readiness is not None and application_dependencies_ready is not None:
@@ -33,6 +43,8 @@ class FoundationApp:
         self._settings = settings or FoundationSettings.from_environment(os.environ)
         self._authorization = authorization or DenyAllAuthorization()
         self._telemetry = telemetry or NoOpTelemetryHooks()
+        self._identity = identity or UnresolvedIdentityBoundary()
+        self._routes = routes or RouteRegistry()
         self._readiness = readiness or StaticReadiness(
             ready=False
             if application_dependencies_ready is None
@@ -46,7 +58,7 @@ class FoundationApp:
 
         method = str(scope.get("method", "GET")).upper()
         path = str(scope.get("path", "/"))
-        headers = list(scope.get("headers", []))
+        headers = tuple(scope.get("headers", []))
         correlation_id = correlation_id_from_headers(headers)
         context = TelemetryContext(correlation_id=correlation_id)
         self._telemetry.request_started(context, method=method, path=path)
@@ -70,6 +82,44 @@ class FoundationApp:
                 correlation_id=None,
             )
         else:
+            identity = self._identity.resolve(
+                correlation_id=correlation_id,
+                method=method,
+                path=path,
+                headers=headers,
+            )
+            route = self._routes.resolve(method, path)
+            request_context = RequestContext(
+                correlation_id=correlation_id,
+                method=method,
+                path=path,
+                purpose_reference=bounded_header_value(
+                    headers,
+                    b"x-ncie-purpose-reference",
+                    default="NOT_SPECIFIED",
+                ),
+                data_classification=bounded_header_value(
+                    headers,
+                    b"x-ncie-data-classification",
+                    default="NOT_CLASSIFIED",
+                ),
+                identity=identity,
+            )
+            if (
+                route is not None
+                and route.requires_authenticated_identity
+                and (identity.state is not IdentityState.AUTHENTICATED)
+            ):
+                status_code = 401
+                payload = self._problem(
+                    status=status_code,
+                    title="Identity unresolved",
+                    detail="WBS-16 identity implementation is required for this route",
+                    correlation_id=correlation_id,
+                )
+                await self._send_json(send, status_code, payload, correlation_id)
+                self._telemetry.request_finished(context, status_code=status_code)
+                return
             authorization = self._authorization.authorize(
                 correlation_id=correlation_id,
                 method=method,
@@ -83,7 +133,7 @@ class FoundationApp:
                     detail=authorization.reason,
                     correlation_id=correlation_id,
                 )
-            else:
+            elif route is None:
                 status_code = 404
                 payload = self._problem(
                     status=status_code,
@@ -91,6 +141,10 @@ class FoundationApp:
                     detail="No application route is registered in the foundation package",
                     correlation_id=correlation_id,
                 )
+            else:
+                application_response = await route.handler(request_context)
+                status_code = application_response.status_code
+                payload = application_response.payload
 
         await self._send_json(send, status_code, payload, correlation_id)
         self._telemetry.request_finished(context, status_code=status_code)
@@ -99,7 +153,9 @@ class FoundationApp:
         payload: dict[str, Any] = {
             "category": "PLATFORM_HEALTH",
             "service": self._settings.service_name,
+            "serviceVersion": self._settings.service_version,
             "environment": self._settings.environment_name,
+            "configurationSchemaVersion": self._settings.configuration_schema_version,
             "status": status,
             "lastUpdated": datetime.now(tz=UTC).isoformat(),
             "authoritativeBusinessState": False,
@@ -111,8 +167,8 @@ class FoundationApp:
             payload["ready"] = ready
         return payload
 
-    @staticmethod
     def _problem(
+        self,
         *,
         status: int,
         title: str,
@@ -125,10 +181,11 @@ class FoundationApp:
             "status": status,
             "detail": detail,
             "correlationId": correlation_id,
+            "serviceVersion": self._settings.service_version,
         }
 
-    @staticmethod
     async def _send_json(
+        self,
         send: Send,
         status_code: int,
         payload: dict[str, Any],
@@ -137,6 +194,7 @@ class FoundationApp:
         response_headers: list[tuple[bytes, bytes]] = [
             (b"content-type", b"application/json"),
             (b"cache-control", b"no-store"),
+            (b"x-ncie-service-version", self._settings.service_version.encode("utf-8")),
         ]
         if correlation_id is not None:
             response_headers.append((b"x-correlation-id", correlation_id.encode("utf-8")))

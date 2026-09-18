@@ -8,6 +8,8 @@ from .authorization import AuthorizationBoundary, DenyAllAuthorization
 from .config import FoundationSettings
 from .lifecycle import LifecycleComponent, ServiceLifecycle
 from .readiness import ReadinessRegistry
+from .request_context import IdentityBoundary, UnresolvedIdentityBoundary
+from .routing import RouteRegistry
 from .telemetry import NoOpTelemetryHooks, TelemetryHooks
 
 LIFECYCLE_DEPENDENCY = "foundation-lifecycle"
@@ -40,6 +42,8 @@ def compose_foundation_service(
     telemetry: TelemetryHooks | None = None,
     lifecycle_components: tuple[LifecycleComponent, ...] = (),
     required_dependencies: tuple[str, ...] = (),
+    identity: IdentityBoundary | None = None,
+    routes: RouteRegistry | None = None,
 ) -> ComposedFoundationService:
     """Compose a local service without resolving secrets or selecting providers."""
 
@@ -55,6 +59,8 @@ def compose_foundation_service(
         authorization=authorization or DenyAllAuthorization(),
         telemetry=telemetry or NoOpTelemetryHooks(),
         readiness=readiness,
+        identity=identity or UnresolvedIdentityBoundary(),
+        routes=routes or RouteRegistry(),
     )
     return ComposedFoundationService(
         settings=settings,

@@ -15,6 +15,7 @@ class NcieJsonFormatter(logging.Formatter):
             "level": record.levelname,
             "logger": record.name,
             "message": record.getMessage(),
+            "signalCategory": getattr(record, "signal_category", "PLATFORM_HEALTH"),
             "classification": getattr(record, "classification", "NOT_SET"),
             "protectedValuesIncluded": False,
         }
