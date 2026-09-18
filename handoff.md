@@ -1,6 +1,6 @@
 # NCIE Controlled Implementation Handoff
 
-Last updated: 2026-09-17
+Last updated: 2026-09-18
 
 Implementation state: IN PROGRESS
 
@@ -27,17 +27,18 @@ The archive does not contain `NCIE_Documentation_Suite_Production_Ready_v3_0_REC
 
 - Branch: `main`
 - Baseline before this increment: `3b3edc2f159ed9b35bdfce27b848be9f6b2d2280`
-- Baseline remote: `origin/main`
+- Current controlled implementation commit before the 2026-09-18 governance update: `5c0f2bf7a60f92aa9cb92cf189432be9f077cb35`.
+- `origin/main` was independently verified at that exact commit after the authorized 2026-09-17 push.
 - Before implementation, the repository contained the NCIE documentation suite and document-generation tooling, but no application dependency manifest or build structure.
 - `NCIE_to_Claude_Master_Production_Instruction_v1_0.pdf` is a pre-existing untracked artifact outside this increment. It is not part of the Codex controlled implementation handoff and must not be included implicitly in this increment.
 
 ## Current work-package state
 
-NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. Lower-level identifier convention remains blocked by `HR17-6-1`; no subordinate controlled work-package ID has been invented.
+NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. The subordinate identifier convention was approved under D3-A in `NCIE-WBS15-OWNER-DECISION-2026-09-17-001`; identifiers such as `WBS-15-WP-001` and `WBS-15-WP-002` may therefore be used without renumbering the controlled workstreams.
 
 | WBS | State | Blocker or authority |
 |---|---|---|
-| WBS-15 Foundation / Platform | IN PROGRESS | `WBS-15-WP-001` is WORK COMPLETE with local verification evidence; remaining WBS-15 packages are not yet defined/started |
+| WBS-15 Foundation / Platform | IN PROGRESS | `WBS-15-WP-001` is WORK COMPLETE with local verification evidence; `WBS-15-WP-002` preparation is authorized under `NCIE-WBS15-OWNER-DECISION-2026-09-18-001`, but implementation is NOT STARTED |
 | WBS-16 Security, IAM & Governance | BLOCKED | WBS-15; `HR17-16-1`; upstream HR9 family |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16; `HR17-17-1`; upstream HR14 family |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17; `HR17-18-1`; provider/source discovery |
@@ -49,6 +50,14 @@ NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. Lower-level i
 | WBS-24 Testing / Verification | TEST PENDING | Controlled execution depends on implementation plus NCIE-016 prerequisites |
 
 The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS15_HUMAN_REVIEW_DECISION_PACK.md`. D1-A, D2-A, D3-A and D4-A were subsequently recorded in `implementation/decisions/NCIE_WBS15_OWNER_DECISION_2026-09-17-001.md` under evidence reference `NCIE-WBS15-OWNER-DECISION-2026-09-17-001`. The natural-person identity and institutional authority assertion were supplied by the user and were not independently verified by Codex.
+
+## Repository push and governance evidence
+
+- Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-17-003` authorized the exact push of commit `5c0f2bf7a60f92aa9cb92cf189432be9f077cb35` to the controlled GitHub repository's `main` branch.
+- The recorded push result was `SUCCESS`; independent `git ls-remote` verification returned the same commit for `refs/heads/main`.
+- The Claude instruction PDF remained untracked and was excluded from that push.
+- Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-001` authorizes this handoff update, control of the `...-003` evidence record, commit and push of the governance update, and preparation-only work on `WBS-15-WP-002`.
+- WP-002 implementation, production deployment, unapproved technology selection and bypass of Human decisions remain unauthorized.
 
 ## Implemented increment
 
@@ -136,8 +145,10 @@ VPF was applied behaviorally to human-primary authority, least privilege, explai
 1. Verify the branch and controlled-source hashes before further implementation.
 2. Run `npm.cmd test` from `implementation/wbs-22-safe-scaffold` and preserve the actual result under a new run identity if the scaffold changes.
 3. Preserve the owner decision record `NCIE-WBS15-OWNER-DECISION-2026-09-17-001`; do not expand its scope implicitly.
-4. Preserve the approved Python 3.14.7/PyPI decision and `requirements-dev.lock`; update dependencies only through a new reviewed lock and evidence run.
-5. Continue only independent WBS-22 semantic/accessibility primitives that do not select an open brand, navigation, breakpoint, conformance level or authoritative state.
-6. Stop the affected scope and issue a blocker report if a requested change requires any unresolved HR item listed above.
-7. Do not treat the WBS-15 source implementation or any future unit-test pass as completion of WBS-16 security, NCIE-016 verification or production acceptance.
-8. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
+4. Preserve owner decisions `NCIE-WBS15-OWNER-DECISION-2026-09-17-003` and `NCIE-WBS15-OWNER-DECISION-2026-09-18-001` as governance evidence; the latter authorizes WP-002 preparation only.
+5. Preserve the approved Python 3.14.7/PyPI decision and `requirements-dev.lock`; update dependencies only through a new reviewed lock and evidence run.
+6. Prepare `WBS-15-WP-002` as a bounded, reviewable work package. Do not begin its implementation until an authorized Human explicitly releases the prepared scope.
+7. Continue only independent WBS-22 semantic/accessibility primitives that do not select an open brand, navigation, breakpoint, conformance level or authoritative state.
+8. Stop the affected scope and issue a blocker report if a requested change requires any unresolved HR item listed above.
+9. Do not treat the WBS-15 source implementation or any future unit-test pass as completion of WBS-16 security, NCIE-016 verification or production acceptance.
+10. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
