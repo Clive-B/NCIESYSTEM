@@ -24,7 +24,13 @@ This source-control release does not authorize production deployment, external-s
 
 ## Execution evidence
 
-Commit and push results are pending execution under this authority.
+- Closure increment commit: `528903a7442d6f17ebb37236156c7594cab410ae`
+- Commit subject: `Complete NCIE WBS-15 foundation closure`
+- Controlled remote: `origin` / `https://github.com/Clive-B/NCIESYSTEM.git`
+- Target branch: `main`
+- Push result: `SUCCESS`
+- Independent remote verification: `git ls-remote origin refs/heads/main` returned `528903a7442d6f17ebb37236156c7594cab410ae`.
+- Excluded artifact: `NCIE_to_Claude_Master_Production_Instruction_v1_0.pdf` remained untracked and was not pushed.
 
 ## Provenance note
 
