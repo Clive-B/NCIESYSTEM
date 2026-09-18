@@ -2,6 +2,8 @@
 
 Status: `WBS-15 — IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING` under owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`.
 
+WBS-16 status: `WBS-16-WP-001 WORK COMPLETE — LOCALLY VERIFIED; SECURITY ACCREDITATION AND ACCEPTANCE PENDING` under implementation authority `NCIE-WBS16-OWNER-DECISION-2026-09-18-009`.
+
 Authority: owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` released the scoped WBS-15 package using type-annotated Python. This package does not authorize production hosting, live credentials, production data, external integrations, security acceptance or go-live.
 
 WP-002 implementation authority: `NCIE-WBS15-OWNER-DECISION-2026-09-18-002` released local service composition, lifecycle, aggregate readiness and in-process harness work without new runtime dependencies.
@@ -33,6 +35,8 @@ WP-003 adds typed request contexts, explicit identity-interface states, protecte
 WP-004 adds five distinct provider-neutral observability categories, typed event/metric/trace contracts, protected-attribute rejection and in-memory test collection while leaving products/deployment to WBS-23.
 
 WP-005 adds the canonical source-tree template manifest, offline clean-environment verification, consolidated traceability, downstream handover and the Human-approved completion report.
+
+WBS-16-WP-001 adds seven provider-neutral security-principal/source categories, four-layer current-authorization contracts, a zero-grant deny-all policy decision point, fail-closed enforcement adaptation and minimized non-authoritative security-decision signals. It adds no provider, credentials, sessions, role assignments, permissions or access grants.
 
 FastAPI remains an NCIE-004 Proposed Design Default allowed by D1-A. It is not added because this package currently needs no runtime dependency and no FastAPI route has yet been authorized. The ASGI boundary is directly adaptable to FastAPI without changing the governed contracts in this package.
 

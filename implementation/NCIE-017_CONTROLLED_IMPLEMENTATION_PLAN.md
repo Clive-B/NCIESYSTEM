@@ -29,7 +29,7 @@ NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`.
 | WBS | Preflight state | Exact dependency or blocker | Permitted action now |
 |---|---|---|---|
 | WBS-15 Foundation / Platform | IMPLEMENTATION COMPLETE / DOWNSTREAM-READY — CONTROLLED VERIFICATION AND ACCEPTANCE PENDING | D9-A approved under `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`; WP-001 through WP-005 work-complete | Preserve the closure boundary; do not infer security accreditation, production deployment, acceptance or go-live authority. |
-| WBS-16 Security, IAM & Governance | BLOCKED / NEXT | WBS-15 predecessor satisfied; `HR17-16-1` and upstream HR9 family remain open | Prepare/obtain the required Human decisions before any security implementation or policy default. |
+| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 WORK COMPLETE / LOCALLY VERIFIED | WP-001 decisions `...-008` and implementation authority `...-009` satisfied; remaining HR9 capabilities and WBS-16 increments remain blocked | Preserve zero grants and exclusions; prepare no broader security capability without new Human decisions. |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16 predecessors; `HR17-17-1`; upstream HR14 family | No physical schema or persistence selection. |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-18-1`; provider/source discovery | No connector or external contract implementation. |
 | WBS-19 ARGUS, Memory, Agent & AI | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-19-1`; Gate A/B, sandbox, and sovereignty prerequisites | No Agent/AI activation or runtime implementation. |
@@ -88,7 +88,15 @@ The same decision authorizes preparation only of:
 
 Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-005` released all three packages in controlled order. WP-003 implemented request, identity-interface and route-extension contracts; WP-004 implemented provider-neutral observability semantics; WP-005 completed offline clean-environment reproducibility, consolidated traceability, downstream handover and the completion report. The clean run passed strict typing/lint/format/compilation, 31 cumulative tests and the template verifier. All three packages are locally `WORK COMPLETE`.
 
-Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006` approved D9-A. WBS-15 is therefore `IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING`. The WBS-16 predecessor condition is satisfied, but WBS-16 remains blocked by `HR17-16-1` and the upstream HR9 decision family. Security accreditation, production deployment, controlled acceptance and go-live remain pending separate Human decisions.
+Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006` approved D9-A. WBS-15 is therefore `IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING`. The WBS-16 predecessor condition is satisfied. Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-18-008` subsequently satisfied the scoped WP-001 decisions, and `NCIE-WBS16-OWNER-DECISION-2026-09-18-009` released their exact implementation scope. All deferred HR9 capabilities, security accreditation, production deployment, controlled acceptance and go-live remain pending.
+
+## 4D. WBS-16-WP-001 implemented scope
+
+The first WBS-16 increment is prepared as `WBS-16-WP-001 Security Principal and Authorization Contract Foundation`. It is limited to provider-neutral principal/source contracts, four-layer current-authorization contracts, deny-all reference behavior, enforcement adaptation, bounded neutral signals and local tests. It introduces no IAM provider, credential/session handling, role mapping, access grant, infrastructure, persistent audit store or production control.
+
+Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-18-008` approves W16-D1-A through W16-D4-A: the bounded first-increment prerequisites, seven provider-neutral principal categories, four-layer deny-by-default authorization with zero grants, and scoped deferral of all remaining HR9 decisions for WP-001 only. Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-18-009` released that exact package for implementation.
+
+WP-001 is locally `WORK COMPLETE`. It implements typed principal/source and current-authorization contracts, the zero-grant deny-all decision point, fail-closed WBS-15 enforcement adaptation and minimized security signals. Strict typing/lint/format/compilation passed across the controlled scope; 40 cumulative tests and the WBS-15 template verifier passed. No provider, credential, session, role/attribute mapping, permission, access grant, external service, infrastructure or deployment was introduced. The broader WBS-16 workstream, deferred HR9 decisions, independent security verification, accreditation and controlled acceptance remain open.
 
 ## 5. Verification mapping
 
