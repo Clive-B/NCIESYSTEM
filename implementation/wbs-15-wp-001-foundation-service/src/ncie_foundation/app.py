@@ -9,6 +9,7 @@ from typing import Any
 from .authorization import AuthorizationBoundary, DenyAllAuthorization
 from .config import FoundationSettings
 from .correlation import correlation_id_from_headers
+from .readiness import ReadinessBoundary, StaticReadiness
 from .telemetry import NoOpTelemetryHooks, TelemetryContext, TelemetryHooks
 
 Scope = dict[str, Any]
@@ -24,12 +25,19 @@ class FoundationApp:
         settings: FoundationSettings | None = None,
         authorization: AuthorizationBoundary | None = None,
         telemetry: TelemetryHooks | None = None,
-        application_dependencies_ready: bool = False,
+        readiness: ReadinessBoundary | None = None,
+        application_dependencies_ready: bool | None = None,
     ) -> None:
+        if readiness is not None and application_dependencies_ready is not None:
+            raise ValueError("Specify readiness or application_dependencies_ready, not both")
         self._settings = settings or FoundationSettings.from_environment(os.environ)
         self._authorization = authorization or DenyAllAuthorization()
         self._telemetry = telemetry or NoOpTelemetryHooks()
-        self._application_dependencies_ready = application_dependencies_ready
+        self._readiness = readiness or StaticReadiness(
+            ready=False
+            if application_dependencies_ready is None
+            else application_dependencies_ready
+        )
 
     async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
         del receive
@@ -47,10 +55,11 @@ class FoundationApp:
             status_code = 200
             payload = self._health_payload(status="UP", ready=None)
         elif method == "GET" and path == "/health/ready":
-            status_code = 200 if self._application_dependencies_ready else 503
+            application_dependencies_ready = self._readiness.snapshot().ready
+            status_code = 200 if application_dependencies_ready else 503
             payload = self._health_payload(
-                status="READY" if self._application_dependencies_ready else "NOT_READY",
-                ready=self._application_dependencies_ready,
+                status="READY" if application_dependencies_ready else "NOT_READY",
+                ready=application_dependencies_ready,
             )
         elif correlation_id is None:
             status_code = 400

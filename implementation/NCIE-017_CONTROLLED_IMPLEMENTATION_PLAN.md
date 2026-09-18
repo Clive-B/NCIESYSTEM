@@ -22,13 +22,13 @@ Controlled implementation corpus: `NCIE PRODUCTION SUIT.zip`
 
 The Master Production Instruction governs execution behavior and expressly authorizes dependency-ready, source-grounded implementation. NCIE-017 remains substantive sequencing authority. Its historical statement that the roadmap itself did not start implementation is preserved as a document-status boundary; this increment relies on the later Master Production Instruction for execution authority. Neither source is treated as test pass, production acceptance, or go-live authority.
 
-NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`, but its lower-level identifier convention remains blocked by `HR17-6-1`. This plan therefore does not fabricate a subordinate controlled work-package ID. The first increment is referenced by its existing authority and scope: **WBS-22 / NCIE-017 Chapter 22.1 safe scaffold**.
+NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`. D3-A under `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` approved stable subordinate work-package and task identifiers without renumbering those workstreams. `WBS-15-WP-002` is therefore a permitted identifier, but its preparation or use does not itself authorize implementation.
 
 ## 3. Workstream readiness and blocker handling
 
 | WBS | Preflight state | Exact dependency or blocker | Permitted action now |
 |---|---|---|---|
-| WBS-15 Foundation / Platform | IN PROGRESS | D1-A/D2-A/D3-A recorded under `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` | Implement `WBS-15-WP-001` local Python foundation within the recorded exclusions. |
+| WBS-15 Foundation / Platform | IN PROGRESS | `WBS-15-WP-001` and `WBS-15-WP-002` are locally work-complete; controlled verification and remaining WBS-15 decomposition are pending | Preserve local evidence and define the next source-grounded package without expanding authority. |
 | WBS-16 Security, IAM & Governance | BLOCKED | WBS-15 predecessor; `HR17-16-1`; upstream HR9 family | No security implementation or policy default. |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16 predecessors; `HR17-17-1`; upstream HR14 family | No physical schema or persistence selection. |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-18-1`; provider/source discovery | No connector or external contract implementation. |
@@ -67,6 +67,14 @@ The Project Owner selections D1-A, D2-A, D3-A and D4-A were supplied and recorde
 Authorized implementation is limited to local repository/application structure, a type-annotated Python service foundation, secret-reference configuration, health/readiness interfaces, structured logging, telemetry hooks, unit/contract tests and traceability. Production hosting, live credentials/data, external integrations, blocked product selections, WBS-16 completion, acceptance and go-live remain excluded.
 
 The implementation exists under `implementation/wbs-15-wp-001-foundation-service/`. Python 3.14.7 and PyPI were approved under `NCIE-WBS15-OWNER-DECISION-2026-09-17-002`; development dependencies are exact-version and SHA-256 locked. Strict mypy, Ruff lint/format, compilation and 8 unit/contract tests passed locally under run `LOCAL-WBS15-WP001-20260917-002`. The package is `WORK COMPLETE`; controlled NCIE-016 verification and acceptance remain pending.
+
+## 4B. WBS-15-WP-002 prepared scope
+
+Owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-001` authorized preparation of `WBS-15-WP-002`. D5-A under `NCIE-WBS15-OWNER-DECISION-2026-09-18-002` subsequently released the exact prepared scope for local implementation.
+
+The prepared package is `WBS-15-WP-002 Local Service Composition and Lifecycle Contracts`. It proposes a typed local composition root, provider-neutral lifecycle contract, aggregate fail-closed readiness registry, configuration startup validation, deterministic in-process test harness, tests, traceability and evidence. It proposes no new runtime dependency and preserves the approved Python 3.14.7 and locked-development-environment boundary.
+
+The package explicitly excludes production deployment, network server selection, security-provider integration, databases, connectors, live credentials/data, institutional Evidence, domain rules, ARGUS/AI runtime, infrastructure, and controlled acceptance. The authorized source scope is implemented with no new dependency. Strict typing, lint, formatting, compilation and all 19 combined WP-001/WP-002 tests passed under `LOCAL-WBS15-WP002-20260918-001`. Package status is `WORK COMPLETE`; controlled NCIE-016 verification and acceptance remain pending.
 
 ## 5. Verification mapping
 

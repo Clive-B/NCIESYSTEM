@@ -3,6 +3,7 @@ import io
 import json
 import logging
 import unittest
+from typing import Any
 
 from ncie_foundation.app import FoundationApp
 from ncie_foundation.config import ConfigurationError, FoundationSettings
@@ -14,16 +15,16 @@ def request(
     path: str,
     *,
     correlation_id: str | None = None,
-) -> tuple[int, dict, list]:
-    messages: list[dict] = []
+) -> tuple[int, dict[str, Any], list[tuple[bytes, bytes]]]:
+    messages: list[dict[str, Any]] = []
     headers: list[tuple[bytes, bytes]] = []
     if correlation_id is not None:
         headers.append((b"x-correlation-id", correlation_id.encode("utf-8")))
 
-    async def receive() -> dict:
+    async def receive() -> dict[str, Any]:
         return {"type": "http.request", "body": b"", "more_body": False}
 
-    async def send(message: dict) -> None:
+    async def send(message: dict[str, Any]) -> None:
         messages.append(message)
 
     asyncio.run(

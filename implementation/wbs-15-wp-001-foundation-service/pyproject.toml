@@ -1,7 +1,7 @@
 [project]
 name = "ncie-foundation-service"
 version = "0.0.0"
-description = "NCIE WBS-15-WP-001 local foundation service"
+description = "NCIE WBS-15 local foundation service"
 readme = "README.md"
 dependencies = []
 
@@ -24,6 +24,8 @@ select = ["E", "F", "I", "UP", "B", "RUF"]
 
 [tool.ncie]
 work-package = "WBS-15-WP-001"
+work-packages = ["WBS-15-WP-001", "WBS-15-WP-002"]
 decision-evidence = "NCIE-WBS15-OWNER-DECISION-2026-09-17-001"
+latest-decision-evidence = "NCIE-WBS15-OWNER-DECISION-2026-09-18-002"
 production-authorized = false
 acceptance-status = "PENDING"
