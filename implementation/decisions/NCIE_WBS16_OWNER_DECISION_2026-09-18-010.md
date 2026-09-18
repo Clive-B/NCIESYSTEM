@@ -29,7 +29,13 @@ This source-control release does not authorize a provider, credentials, role ass
 
 ## Execution evidence
 
-Commit and push results are pending execution under this authority.
+- WBS-16-WP-001 release commit: `9c6b0047c13567b1bf04682b93af8abaaf2672e0`
+- Commit subject: `Implement NCIE WBS-16-WP-001 security contracts`
+- Controlled remote: `origin` / `https://github.com/Clive-B/NCIESYSTEM.git`
+- Target branch: `main`
+- Push result: `SUCCESS`
+- Independent remote verification: `git ls-remote origin refs/heads/main` returned `9c6b0047c13567b1bf04682b93af8abaaf2672e0`.
+- Excluded artifact: `NCIE_to_Claude_Master_Production_Instruction_v1_0.pdf` remained untracked and was not pushed.
 
 ## Provenance note
 
