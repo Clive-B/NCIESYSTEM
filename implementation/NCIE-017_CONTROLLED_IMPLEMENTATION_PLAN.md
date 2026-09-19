@@ -106,7 +106,7 @@ The plan itself authorizes no package. Each requires its named HR9 decisions and
 
 W16-D5-A (`HR9-1-1` / scoped `HR8-10-1`) and W16-D6-A (`HR9-2-1`) were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-011`. Owner decision `...-012` released WP-002 for implementation. WP-002 is locally `WORK COMPLETE`: provider-neutral authority, independent-review, control-ownership, risk-appetite, threat-assumption, risk-treatment and fail-closed development-risk contracts are implemented; 52 cumulative tests and the local quality/template gates passed. No production risk acceptance, accreditation, provider, credential, governed production data, external activation, infrastructure or deployment was introduced.
 
-Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-19-013` authorizes the controlled commit and push of the exact WP-002 implementation, traceability and evidence increment. It grants no broader implementation, accreditation, deployment or go-live authority.
+Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-19-013` authorized the controlled commit and push of the exact WP-002 implementation, traceability and evidence increment. Commit `9ec291a6044bf8c837da514ed2cb693da0477357` was pushed successfully to `origin/main` and matched the remote branch on independent verification. The release grants no broader implementation, accreditation, deployment or go-live authority.
 
 ## 5. Verification mapping
 

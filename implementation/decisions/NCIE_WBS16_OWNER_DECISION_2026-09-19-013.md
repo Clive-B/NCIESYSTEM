@@ -29,7 +29,13 @@ This source-control release does not authorize production risk acceptance, a sec
 
 ## Execution evidence
 
-Release execution evidence will be appended after the authorized commit is pushed and the controlled remote branch is independently verified.
+- WBS-16-WP-002 release commit: `9ec291a6044bf8c837da514ed2cb693da0477357`
+- Commit subject: `Implement NCIE WBS-16-WP-002 security governance`
+- Controlled remote: `origin` / `https://github.com/Clive-B/NCIESYSTEM.git`
+- Target branch: `main`
+- Push result: `SUCCESS`
+- Independent remote verification: `git ls-remote origin refs/heads/main` returned `9ec291a6044bf8c837da514ed2cb693da0477357` immediately after the implementation push.
+- Excluded artifact: `NCIE_to_Claude_Master_Production_Instruction_v1_0.pdf` remained untracked and was not pushed.
 
 ## Provenance note
 

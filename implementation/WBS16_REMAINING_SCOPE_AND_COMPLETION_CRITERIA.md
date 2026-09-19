@@ -25,7 +25,7 @@ WP-001 did not select or activate an identity provider, credentials, sessions, r
 
 ### WBS-16-WP-002 — Security Governance, Risk and Threat Baseline
 
-Status: `WORK COMPLETE — LOCALLY VERIFIED` under implementation authority `NCIE-WBS16-OWNER-DECISION-2026-09-19-012`; controlled source release authorized under `...-013`; independent verification, accreditation and acceptance remain pending.
+Status: `WORK COMPLETE — LOCALLY VERIFIED` under implementation authority `NCIE-WBS16-OWNER-DECISION-2026-09-19-012`; implementation commit `9ec291a6044bf8c837da514ed2cb693da0477357` pushed under `...-013`; independent verification, accreditation and acceptance remain pending.
 
 Purpose: establish the accountable security authority, institutional risk appetite, threat assumptions, control ownership and the rules for accepting or deferring security decisions before broader controls are implemented.
 
