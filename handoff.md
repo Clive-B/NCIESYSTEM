@@ -73,6 +73,7 @@ The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS1
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-19-014` approved the provider-neutral WP-003 source, proofing, assurance and explicit-expiry choices.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-19-015` released the exact WBS-16-WP-003 implementation scope while excluding provider selection, credential issuance and live authentication.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-19-016` authorized commit and push of the exact WBS-16-WP-003 implementation, traceability and evidence increment.
+- The authorized WBS-16-WP-003 increment was committed as `e271c92f5bb7350dfd4d84fb8c5ab7573456fe3b` and pushed successfully to `origin/main`; independent `git ls-remote` verification returned the same branch hash. A follow-up governance-only commit records this push evidence.
 - Production deployment, external-system activation, unapproved technology selection and bypass of Human decisions remain unauthorized.
 
 ## Implemented increment

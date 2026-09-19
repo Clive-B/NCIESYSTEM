@@ -14,3 +14,5 @@ Status: `IMPLEMENTED AND LOCALLY VERIFIED`
 | WBS-15/WP-001/WP-002 integration | Existing source tree and public exports | Strict typing, lint, format, compile, 68 cumulative tests and template verifier | No runtime dependency or framework change |
 
 Implementation evidence is recorded under `evidence/IMPLEMENTATION_20260919_001.md`; local execution evidence is recorded under `evidence/LOCAL_RUN_20260919_001.md`.
+
+Controlled source release evidence is recorded under `evidence/SOURCE_CONTROL_RELEASE_20260919_001.md`.

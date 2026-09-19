@@ -13,4 +13,4 @@ Authority and decision evidence:
 
 The implementation does not select an IAM provider, assign an operational authority holder, issue credentials or sessions, authenticate a live identity, activate recovery, grant authorization, deploy infrastructure or establish security acceptance.
 
-Source-control release is authorized under `...-016`; the resulting commit and remote verification are recorded only after those actions succeed.
+The controlled implementation increment was committed as `e271c92f5bb7350dfd4d84fb8c5ab7573456fe3b` and pushed successfully to `origin/main` under `...-016`; independent remote verification returned the same hash immediately after the push.
