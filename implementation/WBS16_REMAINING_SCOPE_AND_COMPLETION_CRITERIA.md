@@ -4,7 +4,7 @@ Status: `FOR HUMAN REVIEW — PLANNING ONLY; NO FURTHER IMPLEMENTATION AUTHORITY
 
 Prepared: `2026-09-19`
 
-Current workstream state: `IN PROGRESS — WBS-16-WP-001 AND WP-002 WORK COMPLETE / LOCALLY VERIFIED`
+Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-003 WORK COMPLETE / LOCALLY VERIFIED`
 
 ## 1. Current baseline
 
@@ -47,6 +47,8 @@ Excluded: accreditation, production risk acceptance, live incident command and s
 
 ### WBS-16-WP-003 — Identity Lifecycle, Authentication and Session Assurance
 
+Status: `WORK COMPLETE — LOCALLY VERIFIED` under decisions `NCIE-WBS16-OWNER-DECISION-2026-09-19-014` and implementation authority `...-015`; operational IAM, independent verification, accreditation and acceptance remain pending.
+
 Purpose: implement provider-neutral proofing, enrollment/lifecycle, authentication-assurance, step-up, recovery, session and credential-state contracts without silently selecting a provider.
 
 Proposed scope:
@@ -57,13 +59,13 @@ Proposed scope:
 - fail-closed recovery and stale-authority rejection; and
 - local identity-bypass and recovery/revocation tests.
 
-Required decisions:
+Satisfied decisions for this increment:
 
 - `HR9-4-1`: proofing strength per applicable identity class and enrollment authority;
 - `HR9-5-1`: assurance levels, factor-class policy and step-up triggers;
 - `HR9-10-1`: session assurance/expiry policy and credential classes;
 - follow-on disposition of `HR9-3-1`: remain provider-neutral or authorize specific source/provider bindings; and
-- explicit implementation authority for WP-003.
+- explicit implementation authority for WP-003 under `...-015`.
 
 Excluded unless separately approved: named provider, live credentials, real users, production sessions and recovery operations.
 
@@ -291,6 +293,6 @@ This status must not be represented as:
 
 W16-D5-A (`HR9-1-1` / scoped `HR8-10-1`) and W16-D6-A (`HR9-2-1`) were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-011`, and WP-002 was implemented under `...-012`. Its local evidence is recorded under `implementation/wbs-16-wp-002-security-governance-risk-threat/`.
 
-The next dependency-ready planning action is a WP-003 Human decision pack covering `HR9-4-1`, `HR9-5-1`, `HR9-10-1` and the follow-on disposition of `HR9-3-1`. No WP-003 decision preparation or implementation authority is inferred from WP-002 completion.
+W16-D7-A through W16-D10-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-014`, and the exact provider-neutral WP-003 implementation was released under `...-015`. WP-003 is locally work-complete with evidence under `implementation/wbs-16-wp-003-identity-lifecycle-assurance/`. Operational provider binding, authority-holder assignments, factors, numeric thresholds/timing and live IAM remain deferred. The next gate is the WP-004 Human decision pack for `HR9-6-1`, `HR9-7-1`, `HR9-8-1` and `HR9-9-1`; no WP-004 preparation or implementation authority is inferred here.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.
