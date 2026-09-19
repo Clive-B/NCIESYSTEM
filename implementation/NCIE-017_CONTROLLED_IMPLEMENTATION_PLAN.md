@@ -29,7 +29,7 @@ NCIE-017 defines controlled workstream identifiers at `WBS-15` through `WBS-24`.
 | WBS | Preflight state | Exact dependency or blocker | Permitted action now |
 |---|---|---|---|
 | WBS-15 Foundation / Platform | IMPLEMENTATION COMPLETE / DOWNSTREAM-READY — CONTROLLED VERIFICATION AND ACCEPTANCE PENDING | D9-A approved under `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`; WP-001 through WP-005 work-complete | Preserve the closure boundary; do not infer security accreditation, production deployment, acceptance or go-live authority. |
-| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 WORK COMPLETE / LOCALLY VERIFIED | WP-001 decisions `...-008` and implementation authority `...-009` satisfied; remaining HR9 capabilities and WBS-16 increments remain blocked | Preserve zero grants and exclusions; prepare no broader security capability without new Human decisions. |
+| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 AND WP-002 WORK COMPLETE / LOCALLY VERIFIED | WP-001 authorities `...-008`/`...-009`; WP-002 authorities `...-011`/`...-012`; WP-003 onward remains blocked | Preserve zero grants and exclusions; prepare no broader security capability without new Human decisions. |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16 predecessors; `HR17-17-1`; upstream HR14 family | No physical schema or persistence selection. |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-18-1`; provider/source discovery | No connector or external contract implementation. |
 | WBS-19 ARGUS, Memory, Agent & AI | BLOCKED | WBS-16/WBS-17 predecessors; `HR17-19-1`; Gate A/B, sandbox, and sovereignty prerequisites | No Agent/AI activation or runtime implementation. |
@@ -97,6 +97,16 @@ The first WBS-16 increment is prepared as `WBS-16-WP-001 Security Principal and 
 Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-18-008` approves W16-D1-A through W16-D4-A: the bounded first-increment prerequisites, seven provider-neutral principal categories, four-layer deny-by-default authorization with zero grants, and scoped deferral of all remaining HR9 decisions for WP-001 only. Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-18-009` released that exact package for implementation.
 
 WP-001 is locally `WORK COMPLETE`. It implements typed principal/source and current-authorization contracts, the zero-grant deny-all decision point, fail-closed WBS-15 enforcement adaptation and minimized security signals. Strict typing/lint/format/compilation passed across the controlled scope; 40 cumulative tests and the WBS-15 template verifier passed. No provider, credential, session, role/attribute mapping, permission, access grant, external service, infrastructure or deployment was introduced. The broader WBS-16 workstream, deferred HR9 decisions, independent security verification, accreditation and controlled acceptance remain open.
+
+## 4E. WBS-16 remaining controlled sequence
+
+The review-only remaining-scope plan is recorded in `implementation/WBS16_REMAINING_SCOPE_AND_COMPLETION_CRITERIA.md`. It proposes WP-002 through WP-010 in controlled order: governance/risk; identity/authentication/session; authorization/delegation/privileged access; secrets/cryptography/network; Agent/model/Tool/context isolation; DLP/protected identity; logging/detection/incident controls; supply chain/vulnerability/recovery; and cumulative security-verification handover/closure.
+
+The plan itself authorizes no package. Each requires its named HR9 decisions and a separate implementation release. WP-002 received those separate authorities; WP-003 through WP-010 remain unauthorized. WBS-16 remains `IN PROGRESS`; its maximum proposed future closure status retains independent verification, accreditation, controlled acceptance and go-live as pending.
+
+W16-D5-A (`HR9-1-1` / scoped `HR8-10-1`) and W16-D6-A (`HR9-2-1`) were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-011`. Owner decision `...-012` released WP-002 for implementation. WP-002 is locally `WORK COMPLETE`: provider-neutral authority, independent-review, control-ownership, risk-appetite, threat-assumption, risk-treatment and fail-closed development-risk contracts are implemented; 52 cumulative tests and the local quality/template gates passed. No production risk acceptance, accreditation, provider, credential, governed production data, external activation, infrastructure or deployment was introduced.
+
+Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-19-013` authorizes the controlled commit and push of the exact WP-002 implementation, traceability and evidence increment. It grants no broader implementation, accreditation, deployment or go-live authority.
 
 ## 5. Verification mapping
 
