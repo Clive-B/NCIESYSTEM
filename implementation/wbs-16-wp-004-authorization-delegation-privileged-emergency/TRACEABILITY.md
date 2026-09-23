@@ -18,3 +18,5 @@ Status: `IMPLEMENTED AND LOCALLY VERIFIED`
 | Decision provenance | Baseline/decision/implementation constants | Exact `...-017` and `...-018` assertions | No authority beyond WP-004 |
 
 Implementation evidence is recorded under `evidence/IMPLEMENTATION_20260923_001.md`; local execution evidence is recorded under `evidence/LOCAL_RUN_20260923_001.md`.
+
+Controlled source-release evidence is recorded under `evidence/SOURCE_CONTROL_RELEASE_20260923_001.md`.

@@ -79,6 +79,7 @@ The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS1
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-017` approved the zero-grant WP-004 mapping, delegation, privileged-access and emergency-access architecture.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-018` released the exact WP-004 implementation scope while preserving `UNASSIGNED = NO GRANT / DENY` and excluding all live access, providers, credentials, stores, infrastructure and deployment.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-019` authorizes commit and push of the exact verified WP-004 implementation, tests, traceability, evidence and governance increment while excluding the unrelated Claude instruction PDF.
+- The authorized WP-004 increment was committed as `48a25e6751a2c6c51a2e00c124d7c714a9b95499`, pushed successfully to `origin/main`, and independently verified by `git ls-remote`; the unrelated Claude instruction PDF remained untracked and excluded.
 - Production deployment, external-system activation, unapproved technology selection and bypass of Human decisions remain unauthorized.
 
 ## Implemented increment

@@ -14,3 +14,5 @@ Runtime source remains in the dependency-free WBS-15 foundation service at `src/
 The controlled institutional mapping registry is empty. The shipped privileged-approval and emergency-eligibility boundaries are unassigned and deny. Synthetic test fixtures exercise contract paths only and create no institutional mapping, assignment or grant.
 
 No provider, credential, token, secret, live session, external service, persistent store, infrastructure, governed production data or deployment was introduced. WP-005 and later WBS-16 work remain unauthorized.
+
+The authorized increment was committed as `48a25e6751a2c6c51a2e00c124d7c714a9b95499`, pushed successfully to `origin/main`, and independently verified against the remote branch under `...-019`. Release evidence is recorded in `evidence/SOURCE_CONTROL_RELEASE_20260923_001.md`.
