@@ -4,7 +4,7 @@ Status: `FOR HUMAN REVIEW — PLANNING ONLY; NO FURTHER IMPLEMENTATION AUTHORITY
 
 Prepared: `2026-09-19`
 
-Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-003 WORK COMPLETE / LOCALLY VERIFIED`
+Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-004 WORK COMPLETE / LOCALLY VERIFIED`
 
 ## 1. Current baseline
 
@@ -71,6 +71,8 @@ Excluded unless separately approved: named provider, live credentials, real user
 
 ### WBS-16-WP-004 — Authorization Mapping, Delegation, Privileged and Emergency Access
 
+Status: `WORK COMPLETE — LOCALLY VERIFIED` under architecture decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-017` and implementation authority `...-018`; operational assignment, activation, independent verification, accreditation and acceptance remain pending.
+
 Purpose: extend the WP-001 zero-grant model with approved role/attribute mapping contracts, bounded delegation, privileged-access and break-glass controls while retaining least privilege and current authorization.
 
 Proposed scope:
@@ -89,7 +91,7 @@ Required decisions:
 - `HR9-9-1`: break-glass authority, eligible emergencies and post-event review rules; and
 - explicit implementation authority for WP-004.
 
-No role assignment, privilege or emergency access may be activated merely by defining these contracts.
+Implemented disposition: the versioned mapping registry is empty; all four delegation classes, three privileged-access classes and three emergency classes are contract-defined; unassigned privileged/emergency authority boundaries deny; no role assignment, delegation, privilege or emergency access is populated or activated.
 
 ### WBS-16-WP-005 — Secrets, Cryptography and Network Zero-Trust Contracts
 
@@ -293,6 +295,6 @@ This status must not be represented as:
 
 W16-D5-A (`HR9-1-1` / scoped `HR8-10-1`) and W16-D6-A (`HR9-2-1`) were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-011`, and WP-002 was implemented under `...-012`. Its local evidence is recorded under `implementation/wbs-16-wp-002-security-governance-risk-threat/`.
 
-W16-D7-A through W16-D10-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-014`, and the exact provider-neutral WP-003 implementation was released under `...-015`. WP-003 is locally work-complete with evidence under `implementation/wbs-16-wp-003-identity-lifecycle-assurance/`. Operational provider binding, authority-holder assignments, factors, numeric thresholds/timing and live IAM remain deferred. The next gate is the WP-004 Human decision pack for `HR9-6-1`, `HR9-7-1`, `HR9-8-1` and `HR9-9-1`; no WP-004 preparation or implementation authority is inferred here.
+W16-D11-A through W16-D14-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-017`, and the exact provider-neutral WP-004 implementation was released under `...-018`. WP-004 is locally work-complete with evidence under `implementation/wbs-16-wp-004-authorization-delegation-privileged-emergency/`. Institutional mappings, permissions, delegations, privileged/emergency authorities, holders, eligibility, numeric policy and activation remain unassigned; `UNASSIGNED = NO GRANT / DENY`. The next gate is the WP-005 Human decision pack for `HR9-11-1`, `HR9-12-1` and `HR9-13-1`; no WP-005 preparation or implementation authority is inferred here.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.

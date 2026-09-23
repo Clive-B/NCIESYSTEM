@@ -2,7 +2,7 @@
 
 Status: `WBS-15 — IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING` under owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`.
 
-WBS-16 status: WP-001 and WP-002 are locally work-complete. WP-003 is implemented under `NCIE-WBS16-OWNER-DECISION-2026-09-19-015`; its verification status is recorded in the controlled WP-003 evidence. Security accreditation and acceptance remain pending.
+WBS-16 status: WP-001 through WP-004 are locally work-complete. WP-004 is implemented under `NCIE-WBS16-OWNER-DECISION-2026-09-23-018`; its verification status is recorded in the controlled WP-004 evidence. Security accreditation and acceptance remain pending.
 
 Authority: owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` released the scoped WBS-15 package using type-annotated Python. This package does not authorize production hosting, live credentials, production data, external integrations, security acceptance or go-live.
 
@@ -41,6 +41,8 @@ WBS-16-WP-001 adds seven provider-neutral security-principal/source categories, 
 WBS-16-WP-002 adds provider-neutral security-governance authority, independent-review, control-ownership, risk-appetite, threat-assumption and treatment contracts plus fail-closed local-development evaluation. It does not accept production risk, perform accreditation, grant an exception or deploy a control.
 
 WBS-16-WP-003 adds provider-neutral identity proofing and lifecycle states, unassigned enrollment-authority and session-issuer boundaries, symbolic assurance/step-up rules, explicit-expiry credential/session metadata, recovery and revocation propagation contracts, and fail-closed validation. It selects no provider, issues no credential, performs no live authentication and grants no authorization.
+
+WBS-16-WP-004 adds a versioned four-layer authorization-mapping contract with an empty institutional registry, four bounded delegation classes, three privileged-access classes, three emergency-access classes, unassigned approval/eligibility boundaries, expiry/revocation and independent-review contracts, and minimized non-authoritative signals. It populates no institutional mapping or grant and activates no delegation, privilege or emergency capability.
 
 FastAPI remains an NCIE-004 Proposed Design Default allowed by D1-A. It is not added because this package currently needs no runtime dependency and no FastAPI route has yet been authorized. The ASGI boundary is directly adaptable to FastAPI without changing the governed contracts in this package.
 
