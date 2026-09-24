@@ -4,7 +4,7 @@ Status: `FOR HUMAN REVIEW — PLANNING ONLY; NO FURTHER IMPLEMENTATION AUTHORITY
 
 Prepared: `2026-09-19`
 
-Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-005 WORK COMPLETE / LOCALLY VERIFIED`
+Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-006 WORK COMPLETE / LOCALLY VERIFIED`
 
 ## 1. Current baseline
 
@@ -83,7 +83,7 @@ Proposed scope:
 - break-glass eligibility, trigger, time-box, containment and review contracts; and
 - privilege-escalation and stale-delegation negative tests.
 
-Required decisions:
+Satisfied decisions:
 
 - follow-on `HR9-6-1` decision approving actual institution-specific role/attribute mappings or explicitly retaining zero grants;
 - `HR9-7-1`: permitted and prohibited delegation classes;
@@ -132,13 +132,14 @@ Proposed scope:
 - Context/Memory isolation and governed cross-context exceptions; and
 - local sandbox-boundary, Tool-misuse, prompt-injection and cross-context negative tests.
 
-Required decisions:
+Architecture decisions satisfied under `NCIE-WBS16-OWNER-DECISION-2026-09-24-023`:
 
-- `HR9-14-1`: Agent Factory ceilings and generated-code review requirements;
-- `HR9-15-1`: provider-security acceptance and restricted data/provider combinations;
-- `HR9-16-1`: high-risk Tool classes and approval requirements;
-- `HR9-17-1`: cross-context exception approval requirements; and
-- explicit implementation authority for WP-006.
+- `HR9-14-1`: W16-D18-A, provider-neutral Agent/runtime ceilings, zero activation and prohibited generated-code execution;
+- `HR9-15-1`: W16-D19-A, empty provider/model/data-combination registry and zero routes;
+- `HR9-16-1`: W16-D20-A, four Tool classes and zero registered/invokable Tools; and
+- `HR9-17-1`: W16-D21-A, strict isolation, empty exception registry and zero cross-context transfer.
+
+Implementation authority was subsequently granted by `NCIE-WBS16-OWNER-DECISION-2026-09-24-024`. WP-006 is locally work-complete with 134 cumulative tests and all local quality, compilation and template-verification gates passing. The controlled registries remain empty and every Agent, route, Tool and cross-context capability remains absent.
 
 No Agent, model, Tool, provider or cross-context exception is activated by this package without separate current authorization.
 
@@ -301,6 +302,8 @@ W16-D5-A (`HR9-1-1` / scoped `HR8-10-1`) and W16-D6-A (`HR9-2-1`) were approved 
 
 W16-D11-A through W16-D14-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-017`, and the exact provider-neutral WP-004 implementation was released under `...-018`. WP-004 is locally work-complete with evidence under `implementation/wbs-16-wp-004-authorization-delegation-privileged-emergency/`. Institutional mappings, permissions, delegations, privileged/emergency authorities, holders, eligibility, numeric policy and activation remain unassigned; `UNASSIGNED = NO GRANT / DENY`.
 
-W16-D15-A through W16-D17-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-020`, and the exact provider-neutral WP-005 implementation was released under `...-021`. WP-005 is locally work-complete with evidence under `implementation/wbs-16-wp-005-secrets-cryptography-network-zero-trust/`. Operational authorities, protected material, cryptographic parameters/products, destinations, routes, exception grants and networking remain absent; `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`. WP-006 and later implementation remain unauthorized.
+W16-D15-A through W16-D17-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-020`, and the exact provider-neutral WP-005 implementation was released under `...-021`. WP-005 is locally work-complete with evidence under `implementation/wbs-16-wp-005-secrets-cryptography-network-zero-trust/`. Operational authorities, protected material, cryptographic parameters/products, destinations, routes, exception grants and networking remain absent; `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`.
+
+W16-D18-A through W16-D21-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-023`, and the exact zero-capability WP-006 implementation was released under `...-024`. WP-006 is locally work-complete with four empty controlled registries, unassigned operational authorities, inert Agent/model/Tool/Context boundaries and 134 passing cumulative tests. WP-007 and later implementation remain unauthorized.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.

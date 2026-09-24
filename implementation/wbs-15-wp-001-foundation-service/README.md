@@ -2,7 +2,7 @@
 
 Status: `WBS-15 — IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING` under owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`.
 
-WBS-16 status: WP-001 through WP-005 are locally work-complete. WP-005 is implemented under `NCIE-WBS16-OWNER-DECISION-2026-09-23-021`; its verification status is recorded in the controlled WP-005 evidence. Security accreditation and acceptance remain pending.
+WBS-16 status: WP-001 through WP-006 are locally work-complete. WP-006 is implemented under `NCIE-WBS16-OWNER-DECISION-2026-09-24-024`; its verification status is recorded in the controlled WP-006 evidence. Security accreditation and acceptance remain pending.
 
 Authority: owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` released the scoped WBS-15 package using type-annotated Python. This package does not authorize production hosting, live credentials, production data, external integrations, security acceptance or go-live.
 
@@ -45,6 +45,8 @@ WBS-16-WP-003 adds provider-neutral identity proofing and lifecycle states, unas
 WBS-16-WP-004 adds a versioned four-layer authorization-mapping contract with an empty institutional registry, four bounded delegation classes, three privileged-access classes, three emergency-access classes, unassigned approval/eligibility boundaries, expiry/revocation and independent-review contracts, and minimized non-authoritative signals. It populates no institutional mapping or grant and activates no delegation, privilege or emergency capability.
 
 WBS-16-WP-005 adds opaque protected-material references, non-executing lifecycle metadata, unassigned custodial/policy/exception/assurance interfaces, prohibited-surface controls, conceptual cryptographic protection/hierarchy/separation contracts, seven logical zones, five egress classes, Agent/external ceiling evaluation and minimized signals. Its controlled cryptographic and egress registries are empty; it handles no protected material and activates no cryptography, network path or exception.
+
+WBS-16-WP-006 adds provider-neutral Agent ceilings, generated-code quarantine, model/provider eligibility, the four source-defined Tool classes and strict Context isolation contracts. Its four controlled registries are empty; all Human/institutional authority interfaces are unassigned; and its Agent Factory, Model Gateway, Tool Gateway and cross-context boundary validate only synthetic metadata while granting and executing no capability.
 
 FastAPI remains an NCIE-004 Proposed Design Default allowed by D1-A. It is not added because this package currently needs no runtime dependency and no FastAPI route has yet been authorized. The ASGI boundary is directly adaptable to FastAPI without changing the governed contracts in this package.
 
