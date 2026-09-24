@@ -1,6 +1,6 @@
 # WBS-16-WP-007 DLP, Disclosure and Protected-Identity Controls
 
-Status: `WORK COMPLETE / LOCALLY VERIFIED; INDEPENDENT VERIFICATION AND ACCEPTANCE PENDING`
+Status: `WORK COMPLETE / LOCALLY VERIFIED / CONTROLLED SOURCE RELEASED; INDEPENDENT VERIFICATION AND ACCEPTANCE PENDING`
 
 Architecture authority: `NCIE-WBS16-OWNER-DECISION-2026-09-24-026`
 
@@ -13,5 +13,7 @@ This increment implements provider-neutral, zero-output and no-reveal security/p
 `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`.
 
 No real protected identity, governed production data, disclosure, output payload, Protected Reveal, channel, destination, authority assignment, exception, cross-border transfer, product/provider, network capability, dependency, infrastructure or deployment is introduced.
+
+The implementation release commit is `72b542ff5b583516862c658fcd8480603d6f2a32`; its push to `origin/main` was independently verified.
 
 See [WORK_PACKAGE.md](WORK_PACKAGE.md), [TRACEABILITY.md](TRACEABILITY.md), and `evidence/`.

@@ -14,4 +14,8 @@ Implementation evidence: `NCIE-WBS16-OWNER-DECISION-2026-09-24-027`.
 
 Source-control release evidence: `NCIE-WBS16-OWNER-DECISION-2026-09-24-028`.
 
+Released implementation commit: `72b542ff5b583516862c658fcd8480603d6f2a32`, independently verified at `origin/main` before the governance-evidence follow-up.
+
 Local run evidence: `evidence/LOCAL_RUN_20260924_001.md` after final verification.
+
+Source release evidence: `evidence/SOURCE_RELEASE_20260924_001.md`.
