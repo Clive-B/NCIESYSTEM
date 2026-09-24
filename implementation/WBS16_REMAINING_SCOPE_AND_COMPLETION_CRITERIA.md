@@ -177,13 +177,15 @@ Proposed scope:
 - strict separation of operational signals, Findings, Evidence and Human Decisions; and
 - local event-minimization, severity-routing and unauthorized-containment tests.
 
-Required decisions:
+Decision status:
 
-- `HR9-20-1`: security-log retention/access policy and assurance interface, or explicit knowing deferral;
-- `HR9-21-1`: monitoring ownership, escalation classes and severity governance, or explicit knowing deferral;
-- `HR9-22-1`: incident command, notification obligations and containment rights;
-- downstream boundary with WBS-20 Evidence and WBS-23 observability/infrastructure; and
-- explicit implementation authority for WP-008.
+- `HR9-20-1`: W16-D24-A approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-029`;
+- `HR9-21-1`: W16-D25-A approved under the same evidence;
+- `HR9-22-1`: W16-D26-A approved under the same evidence;
+- the WBS-20 Evidence, WBS-23 observability/infrastructure and NCIE-016 independent-verification boundaries are preserved; and
+- exact implementation authority was granted under `NCIE-WBS16-OWNER-DECISION-2026-09-24-030`.
+
+The decided Human Review Decision Pack is recorded at `implementation/decisions/NCIE_WBS16_WP008_HUMAN_REVIEW_DECISION_PACK.md`. WP-008 is locally work-complete with 224 cumulative tests and all local quality, in-memory compilation and template-verification gates passing. All eleven controlled registries, operational authority assignments, retention periods, severity thresholds, recipients, destinations and products remain empty, unassigned or unspecified. No persistent logging, monitoring, alerting, incident declaration, notification or response action is authorized.
 
 Excluded: SIEM/DLP product, persistent audit store, live monitoring, paging, incident command activation or institutional Finding creation.
 
@@ -308,6 +310,8 @@ W16-D15-A through W16-D17-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-
 
 W16-D18-A through W16-D21-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-023`, and the exact zero-capability WP-006 implementation was released under `...-024`. WP-006 is locally work-complete with four empty controlled registries, unassigned operational authorities, inert Agent/model/Tool/Context boundaries and 134 passing cumulative tests.
 
-W16-D22-A and W16-D23-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-026`, and the exact zero-output/no-reveal WP-007 implementation was released under `...-027`. WP-007 is locally work-complete with six empty controlled registries, unassigned operational authorities, inert DLP/protected-identity/privacy-escalation boundaries and 172 passing cumulative tests. No real protected identity, governed data, disclosure, exception, channel, destination, cross-border transfer, product/provider, dependency or infrastructure has been introduced. WP-008 and later implementation remain unauthorized.
+W16-D22-A and W16-D23-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-026`, and the exact zero-output/no-reveal WP-007 implementation was released under `...-027`. WP-007 is locally work-complete with six empty controlled registries, unassigned operational authorities, inert DLP/protected-identity/privacy-escalation boundaries and 172 passing cumulative tests. No real protected identity, governed data, disclosure, exception, channel, destination, cross-border transfer, product/provider, dependency or infrastructure has been introduced.
+
+W16-D24-A through W16-D26-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-029`, and the exact zero-capability WP-008 implementation was released under `...-030`. WP-008 is locally work-complete with eleven empty controlled registries, unassigned operational authorities, minimized synthetic metadata, a non-persistent test collector and inert logging/detection/incident-control boundaries; 224 cumulative tests passed. All semantic separations and fourteen non-waivable protections remain intact. No real log/event/incident, persistent store, Evidence/Finding, period, threshold, destination, monitoring/notification/response operation, product/provider, dependency or infrastructure was introduced. Source-control release and WP-009 or later implementation remain unauthorized.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.
