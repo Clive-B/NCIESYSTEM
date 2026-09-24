@@ -4,7 +4,7 @@ Status: `FOR HUMAN REVIEW — PLANNING ONLY; NO FURTHER IMPLEMENTATION AUTHORITY
 
 Prepared: `2026-09-19`
 
-Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-004 WORK COMPLETE / LOCALLY VERIFIED`
+Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-005 WORK COMPLETE / LOCALLY VERIFIED`
 
 ## 1. Current baseline
 
@@ -29,7 +29,7 @@ Status: `WORK COMPLETE — LOCALLY VERIFIED` under implementation authority `NCI
 
 Purpose: establish the accountable security authority, institutional risk appetite, threat assumptions, control ownership and the rules for accepting or deferring security decisions before broader controls are implemented.
 
-Proposed scope:
+Implemented scope:
 
 - security-architecture acceptance and chapter/control-domain sign-off boundaries;
 - institutional risk-appetite and threat-assumption register;
@@ -37,7 +37,7 @@ Proposed scope:
 - explicit separation of implementation evidence, security verification, accreditation and acceptance; and
 - local governance-contract tests and traceability.
 
-Required decisions:
+Satisfied decisions:
 
 - `HR9-1-1`, together with its upstream duplicate `HR8-10-1`: acceptance and security-architecture sign-off authority;
 - `HR9-2-1`: institutional risk appetite and unresolved threat assumptions; and
@@ -95,25 +95,29 @@ Implemented disposition: the versioned mapping registry is empty; all four deleg
 
 ### WBS-16-WP-005 — Secrets, Cryptography and Network Zero-Trust Contracts
 
+Status: `WORK COMPLETE — LOCALLY VERIFIED` under architecture decision `...-020` and implementation authority `...-021`.
+
 Purpose: implement the logical secrets/key, cryptographic-policy and network trust/egress controls required by NCIE-017 §16.2 without selecting infrastructure silently.
 
-Proposed scope:
+Implemented scope:
 
-- secret-reference custody, rotation, revocation and exception contracts;
+- opaque protected-reference and non-executing lifecycle/exception contracts;
 - key separation and cryptographic-policy metadata;
 - network trust-zone, service-boundary and egress-policy contracts;
 - deny-by-default exception handling; and
 - local secret-leakage, invalid-policy and unauthorized-egress tests.
 
-Required decisions:
+Satisfied decisions:
 
 - `HR9-11-1`: secrets/key custodial authority and exception policy;
-- `HR9-12-1`: cryptographic policy and key-separation tiers, or explicit knowing deferral;
+- `HR9-12-1`: provider-neutral protection, hierarchy, separation and agility contracts with concrete cryptographic policy deferred;
 - `HR9-13-1`: network trust zones, Agent/external egress classes and exception authority;
-- any technology/residency decision required if the package moves beyond neutral contracts; and
-- explicit implementation authority for WP-005.
+- W16-D15-A through W16-D17-A under `NCIE-WBS16-OWNER-DECISION-2026-09-23-020`; and
+- explicit implementation authority under `NCIE-WBS16-OWNER-DECISION-2026-09-23-021`.
 
 Excluded unless separately approved: secret manager, KMS/HSM, certificates, live keys, firewall, service mesh, network or cloud deployment.
+
+Implemented disposition: all authority and operational registries are empty; cryptographic concepts contain no algorithms or products; logical zones and egress contracts create no destination, route or connection; no protected material or external/cross-border operation exists.
 
 ### WBS-16-WP-006 — Agent, Model, Tool and Context Isolation Security
 
@@ -295,6 +299,8 @@ This status must not be represented as:
 
 W16-D5-A (`HR9-1-1` / scoped `HR8-10-1`) and W16-D6-A (`HR9-2-1`) were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-19-011`, and WP-002 was implemented under `...-012`. Its local evidence is recorded under `implementation/wbs-16-wp-002-security-governance-risk-threat/`.
 
-W16-D11-A through W16-D14-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-017`, and the exact provider-neutral WP-004 implementation was released under `...-018`. WP-004 is locally work-complete with evidence under `implementation/wbs-16-wp-004-authorization-delegation-privileged-emergency/`. Institutional mappings, permissions, delegations, privileged/emergency authorities, holders, eligibility, numeric policy and activation remain unassigned; `UNASSIGNED = NO GRANT / DENY`. The next gate is the WP-005 Human decision pack for `HR9-11-1`, `HR9-12-1` and `HR9-13-1`; no WP-005 preparation or implementation authority is inferred here.
+W16-D11-A through W16-D14-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-017`, and the exact provider-neutral WP-004 implementation was released under `...-018`. WP-004 is locally work-complete with evidence under `implementation/wbs-16-wp-004-authorization-delegation-privileged-emergency/`. Institutional mappings, permissions, delegations, privileged/emergency authorities, holders, eligibility, numeric policy and activation remain unassigned; `UNASSIGNED = NO GRANT / DENY`.
+
+W16-D15-A through W16-D17-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-020`, and the exact provider-neutral WP-005 implementation was released under `...-021`. WP-005 is locally work-complete with evidence under `implementation/wbs-16-wp-005-secrets-cryptography-network-zero-trust/`. Operational authorities, protected material, cryptographic parameters/products, destinations, routes, exception grants and networking remain absent; `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`. WP-006 and later implementation remain unauthorized.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.

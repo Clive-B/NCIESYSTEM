@@ -29,7 +29,7 @@ The archive does not contain `NCIE_Documentation_Suite_Production_Ready_v3_0_REC
 - Baseline before this increment: `3b3edc2f159ed9b35bdfce27b848be9f6b2d2280`
 - Current controlled implementation commit before the 2026-09-18 governance update: `5c0f2bf7a60f92aa9cb92cf189432be9f077cb35`.
 - `origin/main` was independently verified at that exact commit after the authorized 2026-09-17 push.
-- Current controlled repository head before this handoff maintenance update: `eca6f520a7c61ed082db1c9c3363db29d44044fc`; local `main` and the `origin/main` tracking reference matched.
+- Final remote `main` observed before WP-005 preparation: `08e7b8201a623b70007a9e2b5164509f12e7853e`; this governance-only evidence commit is the child of WP-004 implementation commit `48a25e6751a2c6c51a2e00c124d7c714a9b95499`.
 - Before implementation, the repository contained the NCIE documentation suite and document-generation tooling, but no application dependency manifest or build structure.
 - `NCIE_to_Claude_Master_Production_Instruction_v1_0.pdf` is a pre-existing untracked artifact outside this increment. It is not part of the Codex controlled implementation handoff and must not be included implicitly in this increment.
 
@@ -40,7 +40,7 @@ NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. The subordina
 | WBS | State | Blocker or authority |
 |---|---|---|
 | WBS-15 Foundation / Platform | IMPLEMENTATION COMPLETE / DOWNSTREAM-READY — CONTROLLED VERIFICATION AND ACCEPTANCE PENDING | D9-A approved under `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`; acceptance, security accreditation and go-live remain pending |
-| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 THROUGH WP-004 WORK COMPLETE / LOCALLY VERIFIED | WP-004 decisions/authority `...-017` and `...-018`; WP-005 onward, operational IAM/access activation, accreditation and acceptance remain pending |
+| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 THROUGH WP-005 WORK COMPLETE / LOCALLY VERIFIED | WP-005 architecture/authority `...-020` and `...-021`; WP-006 onward, operational security activation, accreditation and acceptance remain pending |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16; `HR17-17-1`; upstream HR14 family |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17; `HR17-18-1`; provider/source discovery |
 | WBS-19 ARGUS, Memory, Agent & AI | BLOCKED | WBS-16/WBS-17; `HR17-19-1`; Gate A/B, sandbox and sovereignty prerequisites |
@@ -80,6 +80,10 @@ The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS1
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-018` released the exact WP-004 implementation scope while preserving `UNASSIGNED = NO GRANT / DENY` and excluding all live access, providers, credentials, stores, infrastructure and deployment.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-019` authorizes commit and push of the exact verified WP-004 implementation, tests, traceability, evidence and governance increment while excluding the unrelated Claude instruction PDF.
 - The authorized WP-004 increment was committed as `48a25e6751a2c6c51a2e00c124d7c714a9b95499`, pushed successfully to `origin/main`, and independently verified by `git ls-remote`; the unrelated Claude instruction PDF remained untracked and excluded.
+- The governance-only WP-004 source-evidence update was subsequently committed as `08e7b8201a623b70007a9e2b5164509f12e7853e`; reconciliation confirmed the two hashes are successive states, not conflicting final-state claims.
+- Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-020` approved the provider-neutral WP-005 secrets/key, cryptographic-policy, logical-zone and deny-by-default egress architecture while leaving every operational authority, protected value, algorithm/product, destination and route unassigned.
+- Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-021` released the exact WP-005 contract-only implementation while excluding protected material, technology selection, network activation, external calls, cross-border transfer and WP-006 or later scope.
+- Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-022` authorizes commit and push of the exact verified WP-005 implementation, tests, traceability, evidence and governance increment while requiring the unrelated Claude instruction PDF to remain excluded and untouched.
 - Production deployment, external-system activation, unapproved technology selection and bypass of Human decisions remain unauthorized.
 
 ## Implemented increment
@@ -169,6 +173,10 @@ W16-D7-A through W16-D10-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-0
 
 W16-D11-A through W16-D14-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-017`, and owner decision `...-018` released the exact provider-neutral implementation. Status: locally `WORK COMPLETE`. The implementation adds an empty versioned institutional mapping registry, current four-layer mapping evaluation, four non-expanding delegation classes, three privileged-access classes, three emergency classes, unassigned approval/eligibility boundaries, expiry/revocation, notification/independent-review contracts and minimized signals. Strict typing, lint, formatting and compilation passed; 86 cumulative tests and the WBS-15 template verifier passed under `LOCAL-WBS16-WP004-20260923-001`. No institutional mapping, grant, delegation, privilege, emergency eligibility or access was populated or activated.
 
+### WBS-16-WP-005 implementation
+
+W16-D15-A through W16-D17-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-23-020`, and owner decision `...-021` released the exact provider-neutral implementation. Status: locally `WORK COMPLETE`. The implementation adds opaque protected-material references, non-executing lifecycle metadata, unassigned custodial/policy/exception/assurance interfaces, prohibited-surface controls, conceptual cryptographic policy, seven logical zones, five egress classes, Agent/external ceilings and minimized signals. Strict typing, lint, formatting and compilation passed; 105 cumulative tests and the WBS-15 template verifier passed under `LOCAL-WBS16-WP005-20260923-001`. The controlled cryptographic/egress registries remain empty, and no protected material, algorithm/product, authority, destination, route, exception, network or external capability was introduced.
+
 ## Explicitly unresolved and excluded
 
 - Brand palette, logo, font, imagery and icon brand: `HR12-7-1`.
@@ -251,6 +259,16 @@ WBS-16-WP-004 latest run identity: `LOCAL-WBS16-WP004-20260923-001`
 - Template verifier: passed; production authorization false and controlled acceptance pending.
 - Package status: `WORK COMPLETE`; zero live grants, and operational assignment/activation, independent security verification, accreditation and acceptance remain pending.
 
+WBS-16-WP-005 latest run identity: `LOCAL-WBS16-WP005-20260923-001`
+
+- Python 3.14.7 with the existing seven exact/hash-locked development packages; no new dependency.
+- Strict mypy across source and tests: passed across 29 files.
+- Ruff lint and format checks: passed.
+- Compilation: passed.
+- Cumulative unit/contract tests: 105 executed, 105 passed, 0 failed.
+- Template verifier: passed; production authorization false and controlled acceptance pending.
+- Package status: `WORK COMPLETE`; zero live protected material, operational authority, cryptographic/network capability or exception, with independent security verification, accreditation and acceptance pending.
+
 ## VPF boundary
 
 VPF was applied behaviorally to human-primary authority, least privilege, explainability, provenance, dignity, data minimization and sovereignty. No VPF runtime, checksum seal, signature, certificate, ledger, PADCA/Omnis service, residency enforcement or production control has been verified or claimed as executed.
@@ -272,5 +290,6 @@ VPF was applied behaviorally to human-primary authority, least privilege, explai
 13. Continue only independent WBS-22 semantic/accessibility primitives that do not select an open brand, navigation, breakpoint, conformance level or authoritative state.
 14. Stop the affected scope and issue a blocker report if a requested change requires any unresolved HR item listed above.
 15. Preserve W16-D11-A through W16-D14-A under `NCIE-WBS16-OWNER-DECISION-2026-09-23-017` and the exact WP-004 implementation release under `...-018`; `UNASSIGNED = NO GRANT / DENY`, and no source-control release is authorized by those decisions.
-16. Treat WP-001 through WP-004 as locally work-complete, but do not begin WP-005 or any later WBS-16 implementation until its applicable blockers and Human decisions are resolved; do not treat local success as NCIE-016 verification, security accreditation, production acceptance or go-live.
-17. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
+16. Preserve W16-D15-A through W16-D17-A under `NCIE-WBS16-OWNER-DECISION-2026-09-23-020` and the exact WP-005 implementation release under `...-021`; `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`, and no source-control release is authorized by those decisions.
+17. Treat WP-001 through WP-005 as locally work-complete, but do not begin WP-006 or any later WBS-16 implementation until its applicable blockers and Human decisions are resolved; do not treat local success as operational security enforcement, NCIE-016 verification, accreditation, production acceptance or go-live.
+18. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
