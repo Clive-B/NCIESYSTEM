@@ -28,6 +28,8 @@ Synthetic in-memory test fixtures validate contract semantics only. A `VALID_CON
 
 Local verification passed strict mypy, Ruff lint/format, compilation, 105 cumulative tests and the offline WBS-15 template verifier. See `evidence/LOCAL_RUN_20260923_001.md`.
 
+The released implementation commit and independent remote verification are recorded in `evidence/SOURCE_CONTROL_RELEASE_20260924_001.md`.
+
 This is local implementation evidence, not independent security verification, accreditation, controlled acceptance, deployment or go-live.
 
 ## Stop boundary

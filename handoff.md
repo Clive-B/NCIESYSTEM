@@ -84,6 +84,7 @@ The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS1
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-020` approved the provider-neutral WP-005 secrets/key, cryptographic-policy, logical-zone and deny-by-default egress architecture while leaving every operational authority, protected value, algorithm/product, destination and route unassigned.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-021` released the exact WP-005 contract-only implementation while excluding protected material, technology selection, network activation, external calls, cross-border transfer and WP-006 or later scope.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-23-022` authorizes commit and push of the exact verified WP-005 implementation, tests, traceability, evidence and governance increment while requiring the unrelated Claude instruction PDF to remain excluded and untouched.
+- The authorized WP-005 increment was committed as `f098e6e14114b88784db9381624beb3e99916bf4`, pushed to `origin/main`, and independently verified by `git ls-remote`. The controlled registries remained empty and the unrelated Claude instruction PDF remained untracked and excluded.
 - Production deployment, external-system activation, unapproved technology selection and bypass of Human decisions remain unauthorized.
 
 ## Implemented increment
