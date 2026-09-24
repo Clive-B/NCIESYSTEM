@@ -13,6 +13,7 @@
 | `access_control.py` privileged-access contracts | NCIE-009 Ch.8 Table 13; W16-D13-A | Three-class/interface, unassigned-authority, self-approval, expiry/revocation and content-separation tests | LOCALLY VERIFIED |
 | `access_control.py` emergency contracts | NCIE-009 Ch.9 Table 15; W16-D14-A | Three-class trigger/action, zero-eligibility, auto-expiry, revocation, notification and independent-review tests | LOCALLY VERIFIED |
 | `agent_model_tool_context_security.py` Agent/model/Tool/Context boundaries | NCIE-009 HR9-14-1 through HR9-17-1; W16-D18-A through W16-D21-A | Empty-registry, exact eligibility, current-authorization, generated-code quarantine, prompt-injection, no-route/no-invocation/no-transfer and synthetic negative tests | LOCALLY VERIFIED |
+| `data_loss_privacy.py` DLP/disclosure/protected-identity boundaries | NCIE-009 HR9-18-1 and HR9-19-1; W16-D22-A and W16-D23-A | Exact taxonomy, six empty registries, classification-floor, minimum-necessary, per-recipient authorization, no-output/no-reveal, expiry/revocation, untrusted-content and synthetic negative tests | LOCALLY VERIFIED |
 
 ## Explicit limitations
 
@@ -21,5 +22,6 @@
 - No authentication provider, authorization policy, database, queue, cache, external connector, telemetry exporter or production host is configured.
 - The WP-004 institutional mapping registry and operational privilege/emergency authority boundaries are empty. `UNASSIGNED = NO GRANT / DENY`.
 - The WP-006 Agent primitive, model eligibility, Tool eligibility and cross-context exception registries are empty. Its reference boundaries expose no Agent runtime, provider call, Tool invocation, governed-data retrieval or cross-context transfer.
+- The WP-007 DLP rule, channel/destination, disclosure authority, protected-identity access, privacy authority and disclosure-exception registries are empty. Its reference boundaries expose no output, disclosure, Protected Reveal, identity retrieval, cross-border transfer or operational authority.
 - Readiness indicates only whether this local template can receive requests. It never represents business correctness, institutional Evidence, Human approval or production acceptance.
 - Python tests cannot be executed until an approved interpreter/toolchain exists on the workstation.
