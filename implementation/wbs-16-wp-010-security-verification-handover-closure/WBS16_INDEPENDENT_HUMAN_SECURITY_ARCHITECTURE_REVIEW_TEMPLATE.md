@@ -18,10 +18,19 @@ This template is preparation material only. It contains no reviewer identity, qu
 |---|---|
 | Repository | NCIE controlled repository (`https://github.com/Clive-B/NCIESYSTEM.git`) |
 | Branch | `main` |
-| Exact source version | `f20f866c6e393b49b19f790553408b13c4e1043c` |
+| Exact source version containing this unsigned reviewer pack | `ccee745f201f27427568981623659e56e2cce6aa` |
+| WBS-16 completion baseline immediately before reviewer-pack release | `f20f866c6e393b49b19f790553408b13c4e1043c` |
 | Review purpose | Independent Human Security Architecture Review required by W16-D5-A / W16-D32-A before Project Owner consideration of bounded WBS-16 implementation closure |
 
 The reviewer must verify the repository, branch and commit independently before beginning the review and record any discrepancy as a limitation or finding.
+
+### 1.1 Administrative release chronology
+
+1. Commit `f20f866c6e393b49b19f790553408b13c4e1043c` is the completed WP-001 through WP-010 source/evidence baseline.
+2. Commit `ccee745f201f27427568981623659e56e2cce6aa` is the first exact repository version containing both unsigned reviewer-pack artifacts.
+3. A subsequent administrative commit updates only these two artifacts to record the fixed target and chronology. Its independently verified final `origin/main` hash is supplied with the release handoff and is the checkout commit for the Human reviewer.
+
+The chronology records administrative packaging only. It supplies no Human review, finding, conclusion, verification or closure state.
 
 ## 2. Human reviewer identification and independence
 

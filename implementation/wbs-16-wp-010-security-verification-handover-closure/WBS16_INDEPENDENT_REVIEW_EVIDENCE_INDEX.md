@@ -12,12 +12,23 @@ This index organizes recorded materials without evaluating their sufficiency, co
 |---|---|
 | Repository | NCIE controlled repository (`https://github.com/Clive-B/NCIESYSTEM.git`) |
 | Branch | `main` |
-| Exact final review commit | `f20f866c6e393b49b19f790553408b13c4e1043c` |
+| Exact source version containing this unsigned reviewer pack | `ccee745f201f27427568981623659e56e2cce6aa` |
+| WBS-16 completion baseline immediately before reviewer-pack release | `f20f866c6e393b49b19f790553408b13c4e1043c` |
 | WP-010 implementation commit | `3ca9a4457bf271c6c964bde172ca4d914498d872` |
 | WP-010 governance/source-release evidence commit | `f20f866c6e393b49b19f790553408b13c4e1043c` |
 | Required review character | Independent Human implementation-closure architecture review under W16-D5-A / W16-D32-A |
 
 The reviewer must independently verify the checked-out commit and repository identity.
+
+### 1.1 Administrative release chronology
+
+| Sequence | Commit | Administrative meaning |
+|---|---|---|
+| 1 | `f20f866c6e393b49b19f790553408b13c4e1043c` | Completed WP-001 through WP-010 source/evidence baseline before reviewer-pack preparation |
+| 2 | `ccee745f201f27427568981623659e56e2cce6aa` | First exact repository version containing both unsigned reviewer-pack artifacts |
+| 3 | Final `origin/main` hash supplied with the release handoff | Follow-up commit changing only these two artifacts to record the fixed target and chronology; checkout commit for the Human reviewer |
+
+This chronology is non-evaluative and records no review, finding, verification, acceptance or closure.
 
 ## 2. WP-001 through WP-010 decision and release chain
 
@@ -138,6 +149,6 @@ The reviewer must independently assess the mapping and state separation. This in
 - Reviewer identity, qualifications, independence and conflicts: not supplied by this index
 - Findings and conclusion: not supplied by this index
 - A/B/C option: none selected
-- Source-control status of this unsigned reviewer pack: uncommitted and unpushed pending separate authorization
+- Source-control status of this unsigned reviewer pack: initial administrative release committed and pushed at `ccee745f201f27427568981623659e56e2cce6aa`; fixed-target chronology update pending final push and independent hash verification
 
 The Human reviewer must independently inspect the exact commit, decide which materials are relevant, document any additional materials used, produce their own findings and select their own conclusion. The Project Owner retains the subsequent and separate WBS-16 closure decision.
