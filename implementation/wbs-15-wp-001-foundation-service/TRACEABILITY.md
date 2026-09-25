@@ -16,6 +16,7 @@
 | `data_loss_privacy.py` DLP/disclosure/protected-identity boundaries | NCIE-009 HR9-18-1 and HR9-19-1; W16-D22-A and W16-D23-A | Exact taxonomy, six empty registries, classification-floor, minimum-necessary, per-recipient authorization, no-output/no-reveal, expiry/revocation, untrusted-content and synthetic negative tests | LOCALLY VERIFIED |
 | `security_logging_incident.py` logging/detection/incident-control boundaries | NCIE-009 HR9-20-1 through HR9-22-1; W16-D24-A through W16-D26-A | Eleven empty registries, five detection categories, symbolic severity, minimized events, lifecycle separation, no-monitor/no-notification/no-incident-command/no-containment-recovery and synthetic negative tests | LOCALLY VERIFIED |
 | `security_supply_chain_recovery.py` artifact/vulnerability/recovery-security boundaries | NCIE-009 HR9-23-1 through HR9-25-1; W16-D27-A through W16-D29-A | Thirty empty registries, exact version/provenance, independent review, WP-006 quarantine, stale exception/risk/recovery rejection, current-state precedence and inert boundary tests | LOCALLY VERIFIED |
+| `security_verification_handover.py` verification handover and closure-preparation boundaries | NCIE-009 HR9-26-1 through HR9-28-1; W16-D30-A through W16-D34-A | Exact SEC-T1–SEC-T9 registry, five-state separation, ten empty registries, eighteen protections, twenty-eight HR9 dispositions, bidirectional WP traceability, downstream handovers and false-authority/closure negative tests | LOCALLY VERIFIED |
 
 ## Explicit limitations
 
@@ -27,5 +28,6 @@
 - The WP-007 DLP rule, channel/destination, disclosure authority, protected-identity access, privacy authority and disclosure-exception registries are empty. Its reference boundaries expose no output, disclosure, Protected Reveal, identity retrieval, cross-border transfer or operational authority.
 - The WP-008 log access/retention/assurance/detection/escalation/severity/incident/notification/containment/emergency/restoration registries are empty. Its reference boundaries expose no monitoring, notification, incident command, containment or recovery capability.
 - All thirty WP-009 artifact, vulnerability and recovery-security registries are empty. Its reference boundaries expose no artifact action, repository interaction, scanning, remediation, risk acceptance, recovery, restoration, reauthorization or reinstatement capability.
+- All ten WP-010 tester/verifier/witness/accreditor/acceptance and prerequisite registries are empty. Its reference boundary exposes no controlled execution, independent verification, accreditation, acceptance, deployment, go-live or closure capability.
 - Readiness indicates only whether this local template can receive requests. It never represents business correctness, institutional Evidence, Human approval or production acceptance.
 - Python tests cannot be executed until an approved interpreter/toolchain exists on the workstation.

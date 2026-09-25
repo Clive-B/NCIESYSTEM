@@ -1,10 +1,10 @@
 # WBS-16 Remaining Scope and Completion Criteria
 
-Status: `FOR HUMAN REVIEW — PLANNING ONLY; NO FURTHER IMPLEMENTATION AUTHORITY`
+Status: `CONTROLLED COMPLETION RECORD — WBS-16 REMAINS IN PROGRESS`
 
 Prepared: `2026-09-19`
 
-Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-007 WORK COMPLETE / LOCALLY VERIFIED`
+Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-010 LOCALLY WORK COMPLETE; WP-010 SOURCE RELEASE AUTHORIZED / PENDING; FINAL CLOSURE NOT AUTHORIZED`
 
 ## 1. Current baseline
 
@@ -51,7 +51,7 @@ Status: `WORK COMPLETE — LOCALLY VERIFIED` under decisions `NCIE-WBS16-OWNER-D
 
 Purpose: implement provider-neutral proofing, enrollment/lifecycle, authentication-assurance, step-up, recovery, session and credential-state contracts without silently selecting a provider.
 
-Proposed scope:
+Implemented scope:
 
 - proofing/enrollment/lifecycle state machine and revocation propagation;
 - assurance-level and step-up contracts;
@@ -226,15 +226,15 @@ Proposed scope:
 - unresolved/deferred-item register and downstream handover; and
 - WBS-16 completion report and separate Human closure pack.
 
-Required decisions:
+Architecture decisions:
 
-- `HR9-26-1`: test-acceptance authority, tester independence and the nine required test classes;
-- final `HR9-27-1` disposition for every remaining Blocking and Non-Blocking HR9 item;
-- confirmed `HR9-1-1` / `HR8-10-1` WBS-16 closure authority;
-- explicit implementation authority for WP-010; and
-- a later, separate Human decision approving or rejecting WBS-16 implementation closure.
+- `HR9-26-1`: W16-D30-A approved provider-neutral handover/state contracts for the exact nine test classes, with empty assignment registries and zero controlled execution/verification/acceptance capability;
+- `HR9-27-1`: W16-D31-A approved the complete twenty-eight-item disposition register with downstream gates and fail-closed interim behavior;
+- `HR9-1-1` / `HR8-10-1`: W16-D32-A confirmed W16-D5-A and its independent Human Security Architecture Reviewer prerequisite;
+- `HR9-28-1`: W16-D33-A confirmed the upstream skeletal-baseline resolution remains valid; and
+- W16-D34-A requires a later, separate Human decision approving or rejecting WBS-16 implementation closure.
 
-`HR9-28-1` remains resolved by the approved upstream skeletal baseline and requires no new decision unless the controlled architecture itself changes.
+These architecture decisions were recorded under `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`, the exact contract-only implementation was authorized under `NCIE-WBS16-OWNER-DECISION-2026-09-25-036`, and controlled source release was authorized under `NCIE-WBS16-OWNER-DECISION-2026-09-25-037`. WP-010 is locally work-complete with 310 passing cumulative tests, including 30 targeted tests; strict typing, lint, formatting, compilation and the template verifier passed. Controlled NCIE-016 execution, independent verification, accreditation, acceptance and final WBS-16 closure remain unauthorized. `HR9-28-1` requires a new decision only if the controlled architecture materially changes.
 
 ## 3. Controlled sequence
 
@@ -316,6 +316,8 @@ W16-D22-A and W16-D23-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-2
 
 W16-D24-A through W16-D26-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-029`, the exact zero-capability WP-008 implementation was released under `...-030`, and controlled source release was authorized under `...-031`. WP-008 is locally work-complete with eleven empty controlled registries, unassigned operational authorities, minimized synthetic metadata, a non-persistent test collector and inert logging/detection/incident-control boundaries; 224 cumulative tests passed. Commit `ba126b73eb3dea4fd55cfb59b11e43a42623d33c` was pushed to `origin/main` and independently verified. All semantic separations and fourteen non-waivable protections remain intact. No real log/event/incident, persistent store, Evidence/Finding, period, threshold, destination, monitoring/notification/response operation, product/provider, dependency or infrastructure was introduced.
 
-W16-D27-A through W16-D29-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-032`, owner decision `...-033` released the exact WP-009 contract-only implementation, and `...-034` authorized controlled source release. WP-009 is work-complete and controlled-source-released at implementation commit `a3a222bea9bf0ed00b82ac4d69d19526eed5b9f4`, with thirty empty registries, forty-two unassigned authority classes, eighteen structural protections, inert boundaries and 280 passing cumulative tests. Artifact acceptance/promotion/deployment, vulnerability remediation/risk acceptance and recovery/restoration/reauthorization/reinstatement remain unavailable. WP-010 work is not authorized. `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`.
+W16-D27-A through W16-D29-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-032`, owner decision `...-033` released the exact WP-009 contract-only implementation, and `...-034` authorized controlled source release. WP-009 is work-complete and controlled-source-released at implementation commit `a3a222bea9bf0ed00b82ac4d69d19526eed5b9f4`, with thirty empty registries, forty-two unassigned authority classes, eighteen structural protections, inert boundaries and 280 passing cumulative tests. Artifact acceptance/promotion/deployment, vulnerability remediation/risk acceptance and recovery/restoration/reauthorization/reinstatement remain unavailable.
+
+W16-D30-A through W16-D34-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`, owner decision `...-036` released the exact WP-010 contract-only implementation, and `...-037` authorized controlled source release. WP-010 is locally work-complete with nine exact SEC-T specifications, ten empty controlled registries, unassigned authorities, eighteen structural protections, twenty-eight HR9 dispositions, bidirectional traceability, three non-authorizing handovers and 310 passing cumulative tests. All SEC-T classes remain controlled-execution pending; WBS-16 remains `IN PROGRESS`, and the separate final Human closure decision pack remains `UNDECIDED`. `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.

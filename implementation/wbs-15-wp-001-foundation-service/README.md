@@ -2,7 +2,7 @@
 
 Status: `WBS-15 — IMPLEMENTATION COMPLETE / DOWNSTREAM-READY; CONTROLLED VERIFICATION AND ACCEPTANCE PENDING` under owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`.
 
-WBS-16 status: WP-001 through WP-009 are locally work-complete. WP-009 is implemented under `NCIE-WBS16-OWNER-DECISION-2026-09-24-033`; controlled source release has not been authorized. Independent security verification, accreditation and acceptance remain pending.
+WBS-16 status: WP-001 through WP-010 are locally work-complete. WP-010 is implemented under `NCIE-WBS16-OWNER-DECISION-2026-09-25-036`; source-control release and final WBS-16 closure are not authorized. Independent security verification, accreditation and acceptance remain pending.
 
 Authority: owner decision `NCIE-WBS15-OWNER-DECISION-2026-09-17-001` released the scoped WBS-15 package using type-annotated Python. This package does not authorize production hosting, live credentials, production data, external integrations, security acceptance or go-live.
 
@@ -53,6 +53,8 @@ WBS-16-WP-007 adds the five approved DLP paths, disclosure decisions, output-cha
 WBS-16-WP-008 adds minimized security-event metadata, five detection categories, symbolic severity, incident-control references, eleven empty registries, unassigned authorities, a non-persistent synthetic collector and inert no-monitor/no-notification/no-incident-command/no-containment-recovery boundaries. It creates no real log, alert, incident, notification, containment or recovery capability.
 
 WBS-16-WP-009 adds artifact provenance/version/integrity, dependency/build provenance, verification/quarantine, vulnerability/remediation/exception/risk-treatment and compromised-state/recovery-security contracts. Its thirty controlled registries are empty; all forty-two authority classes are unassigned; and its no-artifact-action, no-remediation and no-recovery boundaries evaluate synthetic metadata while accepting, promoting, deploying, scanning, patching, recovering, restoring, reauthorizing and reinstating nothing.
+
+WBS-16-WP-010 adds the exact nine SEC-T verification-handover specifications, explicit five-state separation, ten empty controlled assignment/prerequisite registries, unassigned authority interfaces, all twenty-eight HR9 dispositions, bidirectional WP-001 through WP-010 traceability and three non-authorizing downstream handovers. Local tests cannot create controlled execution, independent verification, accreditation, acceptance, deployment, go-live or WBS-16 closure.
 
 FastAPI remains an NCIE-004 Proposed Design Default allowed by D1-A. It is not added because this package currently needs no runtime dependency and no FastAPI route has yet been authorized. The ASGI boundary is directly adaptable to FastAPI without changing the governed contracts in this package.
 
