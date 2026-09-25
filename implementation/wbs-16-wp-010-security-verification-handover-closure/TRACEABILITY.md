@@ -15,7 +15,7 @@ Traceability model:
 | WP-007 | NCIE-009 Ch.18–19; HR9-18-1/19-1 | `...-026 / ...-027 / ...-028` | DLP/privacy contracts; WP-007 tests | `LOCAL-WBS16-WP007-20260924-001`; 172 tests | DLP/privacy/WBS-23/NCIE-016 | Work complete; source released; zero disclosure |
 | WP-008 | NCIE-009 Ch.20–22; HR9-20-1–22-1 | `...-029 / ...-030 / ...-031` | logging/detection/incident contracts; WP-008 tests | `LOCAL-WBS16-WP008-20260924-001`; 224 tests | WBS-20/WBS-23/NCIE-016 | Work complete; source released; zero operational response |
 | WP-009 | NCIE-009 Ch.23–25; HR9-23-1–25-1 | `...-032 / ...-033 / ...-034` | supply-chain/vulnerability/recovery contracts; WP-009 tests | `LOCAL-WBS16-WP009-20260924-001`; 280 tests | WBS-20/WBS-23/NCIE-016 | Work complete; source released; zero artifact/remediation/recovery action |
-| WP-010 | NCIE-009 Ch.1/26–28; HR9-1-1/26-1/27-1/28-1 | `...-035 / ...-036 / ...-037` | verification-handover contracts; WP-010 tests | `LOCAL-WBS16-WP010-20260925-001` passed locally | WBS-20/WBS-23/NCIE-016/final Human closure | Work complete; source release authorized; WBS-16 remains `IN PROGRESS` |
+| WP-010 | NCIE-009 Ch.1/26–28; HR9-1-1/26-1/27-1/28-1 | `...-035 / ...-036 / ...-037`; implementation `3ca9a4457bf271c6c964bde172ca4d914498d872` | verification-handover contracts; WP-010 tests | `LOCAL-WBS16-WP010-20260925-001` passed locally | WBS-20/WBS-23/NCIE-016/final Human closure | Work complete; source released; WBS-16 remains `IN PROGRESS` |
 
 The code-level `WBS16_TRACEABILITY_REGISTRY` provides forward lookup by work package and reverse lookup by source requirement or implementation target. Missing WP rows fail construction.
 

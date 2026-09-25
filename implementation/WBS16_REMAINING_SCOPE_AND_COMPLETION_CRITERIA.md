@@ -4,7 +4,7 @@ Status: `CONTROLLED COMPLETION RECORD — WBS-16 REMAINS IN PROGRESS`
 
 Prepared: `2026-09-19`
 
-Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-010 LOCALLY WORK COMPLETE; WP-010 SOURCE RELEASE AUTHORIZED / PENDING; FINAL CLOSURE NOT AUTHORIZED`
+Current workstream state: `IN PROGRESS — WBS-16-WP-001 THROUGH WP-010 WORK COMPLETE / LOCALLY VERIFIED / CONTROLLED SOURCE RELEASED; FINAL CLOSURE NOT AUTHORIZED`
 
 ## 1. Current baseline
 
@@ -318,6 +318,6 @@ W16-D24-A through W16-D26-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-
 
 W16-D27-A through W16-D29-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-24-032`, owner decision `...-033` released the exact WP-009 contract-only implementation, and `...-034` authorized controlled source release. WP-009 is work-complete and controlled-source-released at implementation commit `a3a222bea9bf0ed00b82ac4d69d19526eed5b9f4`, with thirty empty registries, forty-two unassigned authority classes, eighteen structural protections, inert boundaries and 280 passing cumulative tests. Artifact acceptance/promotion/deployment, vulnerability remediation/risk acceptance and recovery/restoration/reauthorization/reinstatement remain unavailable.
 
-W16-D30-A through W16-D34-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`, owner decision `...-036` released the exact WP-010 contract-only implementation, and `...-037` authorized controlled source release. WP-010 is locally work-complete with nine exact SEC-T specifications, ten empty controlled registries, unassigned authorities, eighteen structural protections, twenty-eight HR9 dispositions, bidirectional traceability, three non-authorizing handovers and 310 passing cumulative tests. All SEC-T classes remain controlled-execution pending; WBS-16 remains `IN PROGRESS`, and the separate final Human closure decision pack remains `UNDECIDED`. `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`.
+W16-D30-A through W16-D34-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`, owner decision `...-036` released the exact WP-010 contract-only implementation, and `...-037` authorized controlled source release. WP-010 is work-complete and controlled-source-released at implementation commit `3ca9a4457bf271c6c964bde172ca4d914498d872`, with nine exact SEC-T specifications, ten empty controlled registries, unassigned authorities, eighteen structural protections, twenty-eight HR9 dispositions, bidirectional traceability, three non-authorizing handovers and 310 passing cumulative tests. All SEC-T classes remain controlled-execution pending; WBS-16 remains `IN PROGRESS`, and the separate final Human closure decision pack remains `UNDECIDED`. `UNASSIGNED / UNSPECIFIED = DENY / NO CAPABILITY`.
 
 VPF is applied behaviorally to Human-primary authority, least privilege, explainability, consent, identity dignity, minimization, provenance, sovereignty and African data-residency constraints. No VPF runtime enforcement is claimed.

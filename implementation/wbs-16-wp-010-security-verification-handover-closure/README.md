@@ -1,12 +1,14 @@
 # WBS-16-WP-010 — Security Verification Handover and WBS-16 Implementation Closure
 
-Status: `WORK COMPLETE / LOCALLY VERIFIED — WBS-16 REMAINS IN PROGRESS / SOURCE RELEASE AUTHORIZED`
+Status: `WORK COMPLETE / CONTROLLED SOURCE RELEASED — WBS-16 REMAINS IN PROGRESS`
 
 Architecture authority: `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`.
 
 Implementation authority: `NCIE-WBS16-OWNER-DECISION-2026-09-25-036`.
 
 Source-control release authority: `NCIE-WBS16-OWNER-DECISION-2026-09-25-037`.
+
+Implementation commit: `3ca9a4457bf271c6c964bde172ca4d914498d872` (pushed to and independently verified on `origin/main`).
 
 This package implements provider-neutral verification-handover and implementation-closure-preparation contracts only. It contains exactly nine SEC-T specifications, ten empty controlled assignment/prerequisite registries, all twenty-eight decided HR9 dispositions, bidirectional WP-001 through WP-010 traceability, downstream handovers and a fail-closed completion recommendation that keeps WBS-16 `IN PROGRESS`.
 
