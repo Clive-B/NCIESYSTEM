@@ -40,7 +40,7 @@ NCIE-017 defines workstream identifiers `WBS-15` through `WBS-24`. The subordina
 | WBS | State | Blocker or authority |
 |---|---|---|
 | WBS-15 Foundation / Platform | IMPLEMENTATION COMPLETE / DOWNSTREAM-READY — CONTROLLED VERIFICATION AND ACCEPTANCE PENDING | D9-A approved under `NCIE-WBS15-OWNER-DECISION-2026-09-18-006`; acceptance, security accreditation and go-live remain pending |
-| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 THROUGH WP-010 WORK COMPLETE / LOCALLY VERIFIED / CONTROLLED SOURCE RELEASED | WP-010 released under `...-037`; final closure, independent verification, accreditation and acceptance remain pending |
+| WBS-16 Security, IAM & Governance | IN PROGRESS — WP-001 THROUGH WP-010 WORK COMPLETE / LOCALLY VERIFIED / CONTROLLED SOURCE RELEASED; INDEPENDENT HUMAN ARCHITECTURE REVIEW RECEIVED | Mr. Oko Collision concluded A at review target `16fa3fd...` with no findings or conditions; final Project Owner closure, NCIE-016 verification, accreditation and acceptance remain pending |
 | WBS-17 Data, Database & Storage | BLOCKED | WBS-15/WBS-16; `HR17-17-1`; upstream HR14 family |
 | WBS-18 API, Integration & Connector | BLOCKED | WBS-16/WBS-17; `HR17-18-1`; provider/source discovery |
 | WBS-19 ARGUS, Memory, Agent & AI | BLOCKED | WBS-16/WBS-17; `HR17-19-1`; Gate A/B, sandbox and sovereignty prerequisites |
@@ -104,6 +104,9 @@ The minimum blocker proposal is preserved in `implementation/decisions/NCIE_WBS1
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-25-036` releases the exact WP-010 contract-only implementation while preserving every restriction in `...-035`; it grants no source-control release, controlled NCIE-016 execution, independent verification, accreditation, acceptance, deployment, go-live or WBS-16 closure authority.
 - Owner decision `NCIE-WBS16-OWNER-DECISION-2026-09-25-037` authorizes commit and push of the exact verified WP-010 increment while preserving all test-state separations, empty registries, unassigned authorities, non-authorizing handovers, `IN PROGRESS` WBS-16 status and the `UNDECIDED` final closure pack.
 - The authorized WP-010 implementation increment was committed as `3ca9a4457bf271c6c964bde172ca4d914498d872`, pushed successfully to `origin/main`, and independently verified by `git ls-remote`. All nine SEC-T classes remain controlled-execution pending, all ten registries remain empty, WBS-16 remains `IN PROGRESS`, and the unrelated Claude instruction PDF remains untracked, excluded and untouched.
+- The unsigned independent-review preparation pack was committed as `ccee745f201f27427568981623659e56e2cce6aa`; its fixed-target chronology update was committed as `16fa3fd58501462e06671a76b6738f5f05d4d1ba`, pushed to `origin/main`, and independently verified.
+- Human reviewer Mr. Oko Collision supplied the completed Independent Human Security Architecture Review dated `28/09/2026` against exact review target `16fa3fd58501462e06671a76b6738f5f05d4d1ba`. The supplied conclusion is `A — SUPPORTS bounded WBS-16 implementation closure`; the review records no findings and no corrections or conditions. This is an implementation-closure architecture review only and does not establish NCIE-016 controlled execution, independent security verification under NCIE-016, security accreditation, controlled acceptance, deployment approval or go-live approval.
+- The completed review is recorded as the required W16-D5-A / W16-D32-A Human review input. The final Project Owner closure pack remains `UNDECIDED`; WBS-16 remains `IN PROGRESS`, final closure is not yet issued, and SEC-T1 through SEC-T9 remain `CONTROLLED NCIE-016 TEST PENDING`.
 - Production deployment, external-system activation, unapproved technology selection and bypass of Human decisions remain unauthorized.
 
 ## Implemented increment
@@ -212,6 +215,8 @@ W16-D27-A through W16-D29-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-
 ### WBS-16-WP-010 implementation
 
 W16-D30-A through W16-D34-A were approved under `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`, owner decision `...-036` released the exact controlled implementation, and `...-037` authorized its controlled source release. Status: `WORK COMPLETE / CONTROLLED SOURCE RELEASED`; implementation commit `3ca9a4457bf271c6c964bde172ca4d914498d872` was pushed and independently verified; WBS-16 remains `IN PROGRESS`. The implementation adds the exact nine SEC-T specifications, explicit five-state separation, ten empty controlled assignment/prerequisite registries, unassigned authority interfaces, eighteen structural protections, all twenty-eight HR9 dispositions, bidirectional WP-001 through WP-010 traceability and three non-authorizing downstream handovers. Strict typing, lint, formatting and in-memory compilation passed across 39 files; 310 cumulative tests, including 30 WP-010 targeted tests, and the existing reproducible-template verifier passed under `LOCAL-WBS16-WP010-20260925-001`. No controlled test execution, independent verification, accreditation, acceptance, product/environment selection, governed data use, deployment, go-live or final closure was performed or claimed.
+
+The required independent Human Security Architecture Review input was subsequently supplied by Mr. Oko Collision for exact source version `16fa3fd58501462e06671a76b6738f5f05d4d1ba`, dated `28/09/2026`, with conclusion `A — SUPPORTS bounded WBS-16 implementation closure`, no findings and no conditions/corrections. The record passed document-level closure-prerequisite consistency checks and is referenced without reinterpretation. It does not itself close WBS-16 or establish NCIE-016 verification, accreditation, acceptance, deployment or go-live. The prepared final Project Owner decision pack remains `UNDECIDED`.
 
 ## Explicitly unresolved and excluded
 
@@ -355,6 +360,17 @@ WBS-16-WP-010 latest run identity: `LOCAL-WBS16-WP010-20260925-001`
 - Template verifier: passed; production authorization false and controlled acceptance pending.
 - Package status: `WORK COMPLETE / CONTROLLED SOURCE RELEASED`; implementation commit `3ca9a4457bf271c6c964bde172ca4d914498d872` was pushed and independently verified; nine SEC-T specifications remain only locally implementation-tested, ten controlled registries remain empty, every controlled authority is unassigned, and controlled execution, independent verification, accreditation, acceptance, deployment, go-live and WBS-16 closure remain pending.
 
+WBS-16 independent Human Security Architecture Review input:
+
+- Reviewer: Mr. Oko Collision.
+- Review date: `28/09/2026`.
+- Exact reviewed source: `16fa3fd58501462e06671a76b6738f5f05d4d1ba`.
+- Human reviewer conclusion: `A — SUPPORTS bounded WBS-16 implementation closure`.
+- Findings: none identified by the reviewer.
+- Conditions/corrections: none identified by the reviewer.
+- Boundary: implementation-closure architecture review only; no NCIE-016 controlled execution, independent security verification under NCIE-016, accreditation, controlled acceptance, deployment approval or go-live approval.
+- Current state: review input received; final Project Owner decision `UNDECIDED`; WBS-16 `IN PROGRESS`; SEC-T1 through SEC-T9 `CONTROLLED NCIE-016 TEST PENDING`.
+
 ## VPF boundary
 
 VPF was applied behaviorally to human-primary authority, least privilege, explainability, provenance, dignity, data minimization and sovereignty. No VPF runtime, checksum seal, signature, certificate, ledger, PADCA/Omnis service, residency enforcement or production control has been verified or claimed as executed.
@@ -384,5 +400,7 @@ VPF was applied behaviorally to human-primary authority, least privilege, explai
 21. Preserve W16-D27-A through W16-D29-A under `NCIE-WBS16-OWNER-DECISION-2026-09-24-032`, the exact WP-009 implementation release under `...-033`, source-control release authority under `...-034`, and released implementation commit `a3a222bea9bf0ed00b82ac4d69d19526eed5b9f4`; retain thirty empty registries, unassigned authorities, all eighteen non-waivable protections and zero artifact/remediation/recovery capability.
 22. Preserve W16-D30-A through W16-D34-A under `NCIE-WBS16-OWNER-DECISION-2026-09-25-035`, the exact WP-010 implementation release under `...-036` and controlled source-release authority under `...-037`; retain the exact nine SEC-T classes, all eighteen non-waivable protections, the five explicit test states, empty controlled assignment registries and the separate final Human closure gate. Do not infer WBS-16 closure authority.
 23. Treat WP-001 through WP-010 as locally work-complete and controlled-source-released; preserve WP-010 implementation commit `3ca9a4457bf271c6c964bde172ca4d914498d872`, but do not treat local success or source release as operational security enforcement, NCIE-016 verification, accreditation, production acceptance, go-live or final WBS-16 closure.
-24. Keep the unrelated Claude instruction PDF untracked, excluded and untouched.
-25. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
+24. Preserve the completed Human review by Mr. Oko Collision dated `28/09/2026` against `16fa3fd58501462e06671a76b6738f5f05d4d1ba` as the W16-D5-A / W16-D32-A review input, without rewriting its conclusion A, no-findings result or no-conditions result; do not treat that review as the separate Project Owner closure decision or as NCIE-016 verification, accreditation, acceptance, deployment or go-live.
+25. Keep the final Project Owner closure pack `UNDECIDED`, WBS-16 `IN PROGRESS`, and SEC-T1 through SEC-T9 `CONTROLLED NCIE-016 TEST PENDING` until a separately issued Project Owner closure decision.
+26. Keep the unrelated Claude instruction PDF untracked, excluded and untouched.
+27. At increment close, report changed artifacts, blocker status, tests specified/executed, deviations and the next dependency-ready scope without implying acceptance.
